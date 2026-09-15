@@ -9,3 +9,7 @@ A good presentation explanation would be:
 > **Questions were rated according to the potential risk created by a negative response: High for controls whose absence could directly result in material impact, Medium where the impact depends on context or compensating controls, and Low for supporting indicators that inform but do not independently determine the risk conclusion.**
 
 I would, however, challenge some of the original ratings. **MFA, vulnerability management and security patching should not automatically remain Medium**. Where they protect critical or externally exposed systems, their absence could justify a High rating. This is one reason the later framework needs risk-based weighting and evidence, rather than relying on fixed ratings attached to broad Yes/No questions.
+
+---
+
+The rating should be treated as an initial risk indicator and discussion starter, rather than a fixed threshold or automatic conclusion. The SCO should consider the client’s context, the scope and criticality of the affected systems and any compensating controls. Where a response raises concern or the SCO is uncomfortable with the resulting risk interpretation, RISK ORM may be involved for clarification. If the client has experienced a cyber breach, RISK ORM must be involved to conduct an in-depth analysis.
