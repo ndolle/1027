@@ -139,4 +139,36 @@ The complete **Week 43 (Late October 2026)** edition of the **Digital Asset Exec
 
 ***
 
-🎙️ Would you like me to generate a 5-minute **Audio Overview** briefing or build an **Executive Presentation Slide Deck** based on this finalized Week 43 edition?
+I have replaced the two broader AI items in **Technology and Risk** with two **100% digital asset/blockchain security and enforcement developments** from this week's primary sources. 
+
+The updated version has been published directly to your Studio panel as:
+
+**`crypto-news-2026-43-v2.md`**
+
+---
+
+### **Replaced Items in Technology & Risk**
+
+1. **Security Researchers Warn of Rising Etherscan Lookalike Address Poisoning Scams** *(Replaced Block Voice AI)*
+   * On-chain security analysts issued a formal warning regarding automated address-poisoning campaigns targeting high-volume Web3 traders on public blockchains.
+   * Attackers deploy automated bots to generate lookalike wallet addresses matching victims' recent transaction history, tricking users into copying malicious destination addresses.
+   * The threat vector highlights persistent operational security vulnerabilities in Web3 user interfaces, requiring digital asset custodians to enforce strict address-whitelisting protocols.
+   * [Read more](https://cryptobriefing.com/etherscan-lookalike-address-warning-scams/)
+
+2. **CFTC Obtains \$288 Million Federal Judgment Against EminiFX Crypto Ponzi Syndicate** *(Replaced ConnectWise AI Code Breach)*
+   * The U.S. Commodity Futures Trading Commission secured a \$288 million federal court judgment against operators of the EminiFX digital asset investment scheme.
+   * Court findings revealed that operators solicited over \$240 million from retail investors under false guarantees of automated crypto trading returns, embezzling customer deposits into private accounts.
+   * This enforcement judgment reinforces aggressive CFTC prosecution of fraudulent digital asset investment schemes operating in U.S. jurisdictions.
+   * [Read more](https://cryptobriefing.com/cftc-eminifx-288-million-ponzi-judgment/)
+
+---
+
+### **Final Section Composition (19 Items — 100% Digital Assets)**
+
+* **Regulatory Update (6 items):** OCC GENIUS Act yield rules, SEC 2027 DLT examination priorities, Cardano Foundation MiCA DeFi policy, CFTC federal swap preemption, Börse Stuttgart Seturion DLT license, and Central Bank of Ireland Coinbase e-money fine.
+* **Market Outlook (7 items):** BNP Paribas AssetFoundry™ public Ethereum MMFs, Qivalis Euro stablecoin Fireblocks architecture, Swift 40-second tokenized deposit clearing, DTCC DTC Tokenization Service margin rollout, corporate pushback on tokenized stocks, Mastercard on-chain stablecoin screening, and French 31% crypto-to-stablecoin tax levy.
+* **Technology & Risk (6 items):** White House crypto cybercrime roundtable, BitGet cloud vendor key isolation, Cysic ZK-prover bridge exploit, Etherscan lookalike address poisoning, China \$3.8B Bitcoin confiscation, and CFTC \$288M EminiFX Ponzi judgment.
+
+***
+
+🎙️ Would you like me to generate a 5-minute **Audio Overview** briefing based on this updated Week 43 edition? 
