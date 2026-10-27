@@ -1,5 +1,6 @@
 
 ### fraud consequence - question 10 
+Purpose: Understand the sector's inherent exposure to fraud, including fraud that does not involve a cybersecurity breach.
 
 ```
 Perform a comprehensive fraud risk exposure assessment of the {SECTOR} sector worldwide, with particular attention to the EU, UK and US.
@@ -21,8 +22,8 @@ Output: five principal fraud scenarios, quantitative evidence where available, s
 
 
 ### question 11 : Sector ICT exposure and cybersecurity maturity
-
-'''
+Purpose: Determine whether the sector has structural characteristics that make cyber compromise more consequential, and separately assess available evidence of preparedness.
+```
 Assess the inherent Cyber / ICT exposure and available cybersecurity maturity evidence for the {SECTOR} sector.
 
 Analyse:
@@ -37,10 +38,12 @@ Analyse:
 Separate inherent technological exposure from observed cybersecurity maturity. Identify where findings apply only to individual organisations rather than the sector as a whole.
 
 Output: structural exposure indicators, sector maturity evidence, comparative benchmarks, significant gaps, supporting sources and confidence levels.
-'''
+```
 
 ### Q12 — Operational resilience and third-party concentration
+Purpose: Determine how severely a cyber or ICT disruption could affect essential sector operations, including disruption originating outside the affected organisation.
 
+```
 Conduct a sector-level Operational Resilience and Third-Party Risk Management exposure assessment for the {SECTOR} sector.
 
 Analyse:
@@ -55,9 +58,12 @@ Analyse:
 Distinguish structural disruption sensitivity from observed preparedness. Do not infer that all businesses have the same dependency arrangements.
 
 Output: critical dependency matrix, disruption case studies, third-party concentration indicators, systemic exposure pathways, financial consequences and a preliminary sector exposure assessment with evidence confidence.
+```
 
 ### Q13 — Governance structure and operating-model complexity
+Purpose: Assess whether typical sector operating models create structural governance and oversight challenges.
 
+```
 Assess the inherent Governance Structure and Operating Model exposure of the {SECTOR} sector, focusing on the organisational characteristics that can complicate risk ownership, accountability and operational oversight.
 
 Analyse:
@@ -72,10 +78,12 @@ Analyse:
 Distinguish structural governance complexity from demonstrated governance failures. Do not conclude that a sector has ineffective governance solely because its organisations are large, complex or internationally distributed.
 
 Output: principal governance complexity drivers, documented oversight failures, relevant benchmarks, implications for operational risk and a preliminary inherent sector exposure assessment with supporting evidence and confidence.
+```
 
 ### Q14 — Cross-sector comparative analysis
+Purpose: Prevent rating inflation and establish whether one sector genuinely has greater exposure than another.
 
-
+```
 Perform a comparative inherent non-financial risk exposure analysis of the {SECTOR} sector against other relevant economic sectors.
 
 Compare four dimensions: Fraud, Cyber / ICT, Operational Resilience / TPRM, and Governance Structure / Operating Model.
@@ -91,10 +99,11 @@ For each dimension:
 Do not create artificial cross-sector rankings from incomparable datasets. Explicitly flag missing indicators and evidence limitations.
 
 Output: comparative sector exposure matrix, benchmark metrics, methodological limitations, peer-sector comparisons and confidence assessment.
-
+```
 
 ### Q15 — Four-dimension sector exposure classification
 
+```
 Using all validated sector intelligence findings for {SECTOR}, prepare a defensible inherent exposure classification across four dimensions:
 
 1. Fraud
@@ -113,5 +122,5 @@ For each dimension:
 - Identify material subsector variations and missing information.
 
 Do not invent numerical scores, sector averages, regulatory failures or unsupported conclusions. If the agreed rating criteria or adequate evidence are unavailable, mark the proposed rating as provisional or not assessable.
-
+```
 Output a four-dimension rating matrix with concise evidence-backed justifications suitable for Senior Credit Officers, followed by an analytical evidence annex for second-line review.
