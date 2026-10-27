@@ -16,11 +16,13 @@ Analyse:
 
 Distinguish cyber-enabled fraud from internal or non-cyber fraud, and distinguish actual sector exposure from controls' observed effectiveness.
 
-Output: five principal fraud scenarios, quantitative evidence where available, structural exposure drivers, documented cases, relevant control weaknesses and a preliminary inherent sector exposure assessment. Provide source references, methodology and evidence confidence.```
+Output: five principal fraud scenarios, quantitative evidence where available, structural exposure drivers, documented cases, relevant control weaknesses and a preliminary inherent sector exposure assessment. Provide source references, methodology and evidence confidence.
+```
 
 
 ### question 11 : Sector ICT exposure and cybersecurity maturity
 
+'''
 Assess the inherent Cyber / ICT exposure and available cybersecurity maturity evidence for the {SECTOR} sector.
 
 Analyse:
@@ -35,6 +37,7 @@ Analyse:
 Separate inherent technological exposure from observed cybersecurity maturity. Identify where findings apply only to individual organisations rather than the sector as a whole.
 
 Output: structural exposure indicators, sector maturity evidence, comparative benchmarks, significant gaps, supporting sources and confidence levels.
+'''
 
 ### Q12 — Operational resilience and third-party concentration
 
