@@ -1,6 +1,7 @@
 
 ### fraud consequence - question 10 
 
+```
 Perform a comprehensive fraud risk exposure assessment of the {SECTOR} sector worldwide, with particular attention to the EU, UK and US.
 
 Identify the principal fraud typologies affecting the sector, including payment diversion, business email compromise, invoice and procurement fraud, supplier impersonation, insider fraud, asset misappropriation, financial statement manipulation, identity fraud and other sector-specific schemes.
@@ -15,7 +16,7 @@ Analyse:
 
 Distinguish cyber-enabled fraud from internal or non-cyber fraud, and distinguish actual sector exposure from controls' observed effectiveness.
 
-Output: five principal fraud scenarios, quantitative evidence where available, structural exposure drivers, documented cases, relevant control weaknesses and a preliminary inherent sector exposure assessment. Provide source references, methodology and evidence confidence.
+Output: five principal fraud scenarios, quantitative evidence where available, structural exposure drivers, documented cases, relevant control weaknesses and a preliminary inherent sector exposure assessment. Provide source references, methodology and evidence confidence.```
 
 
 ### question 11 : Sector ICT exposure and cybersecurity maturity
@@ -72,7 +73,26 @@ Output: principal governance complexity drivers, documented oversight failures, 
 ### Q14 — Cross-sector comparative analysis
 
 
-''' Using all validated sector intelligence findings for {SECTOR}, prepare a defensible inherent exposure classification across four dimensions:
+Perform a comparative inherent non-financial risk exposure analysis of the {SECTOR} sector against other relevant economic sectors.
+
+Compare four dimensions: Fraud, Cyber / ICT, Operational Resilience / TPRM, and Governance Structure / Operating Model.
+
+For each dimension:
+1. Identify objective structural exposure indicators.
+2. Retrieve reliable comparable sector-level incident, loss, concentration and disruption evidence where available.
+3. Normalise comparisons where possible for organisation size, sector population, geography, reporting period and data coverage.
+4. Identify whether the sector is relatively more or less exposed than relevant peer sectors, and explain why.
+5. Identify significant subsector differences and limitations of broad industry classifications.
+6. Distinguish inherent exposure from control effectiveness, observed incident frequency and reporting bias.
+
+Do not create artificial cross-sector rankings from incomparable datasets. Explicitly flag missing indicators and evidence limitations.
+
+Output: comparative sector exposure matrix, benchmark metrics, methodological limitations, peer-sector comparisons and confidence assessment.
+
+
+### Q15 — Four-dimension sector exposure classification
+
+Using all validated sector intelligence findings for {SECTOR}, prepare a defensible inherent exposure classification across four dimensions:
 
 1. Fraud
 2. Cyber / ICT
@@ -90,24 +110,5 @@ For each dimension:
 - Identify material subsector variations and missing information.
 
 Do not invent numerical scores, sector averages, regulatory failures or unsupported conclusions. If the agreed rating criteria or adequate evidence are unavailable, mark the proposed rating as provisional or not assessable.
-'''
 
 Output a four-dimension rating matrix with concise evidence-backed justifications suitable for Senior Credit Officers, followed by an analytical evidence annex for second-line review.
-Perform a comparative inherent non-financial risk exposure analysis of the {SECTOR} sector against other relevant economic sectors.
-
-Compare four dimensions: Fraud, Cyber / ICT, Operational Resilience / TPRM, and Governance Structure / Operating Model.
-
-For each dimension:
-1. Identify objective structural exposure indicators.
-2. Retrieve reliable comparable sector-level incident, loss, concentration and disruption evidence where available.
-3. Normalise comparisons where possible for organisation size, sector population, geography, reporting period and data coverage.
-4. Identify whether the sector is relatively more or less exposed than relevant peer sectors, and explain why.
-5. Identify significant subsector differences and limitations of broad industry classifications.
-6. Distinguish inherent exposure from control effectiveness, observed incident frequency and reporting bias.
-
-Do not create artificial cross-sector rankings from incomparable datasets. Explicitly flag missing indicators and evidence limitations.
-
-Output: comparative sector exposure matrix, benchmark metrics, methodological limitations, peer-sector comparisons and confidence assessment.
-
-### Q15 — Four-dimension sector exposure classification
-
