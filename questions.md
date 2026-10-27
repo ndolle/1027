@@ -71,8 +71,8 @@ Output: principal governance complexity drivers, documented oversight failures, 
 
 ### Q14 — Cross-sector comparative analysis
 
-'''
-Using all validated sector intelligence findings for {SECTOR}, prepare a defensible inherent exposure classification across four dimensions:
+
+''' Using all validated sector intelligence findings for {SECTOR}, prepare a defensible inherent exposure classification across four dimensions:
 
 1. Fraud
 2. Cyber / ICT
