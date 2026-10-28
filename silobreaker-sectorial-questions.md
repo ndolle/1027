@@ -45,7 +45,8 @@ Research sector: `{SECTOR}`. Geographic scope: worldwide, with EU, UK and US ana
 
 Prioritise primary sources, official incident disclosures, regulators, credible threat intelligence and financial filings. Document sources, dates, geography and confidence. Distinguish verified facts from analytical assessments or unverified allegations. Never invent financial losses, exploited weaknesses or attack attribution.
 
-Analyse relevant subsectors and business models. Explicitly identify evidence gaps and produce structured findings suitable for reuse in the credit intelligence report.```
+Analyse relevant subsectors and business models. Explicitly identify evidence gaps and produce structured findings suitable for reuse in the credit intelligence report.
+```
 
 ### Q01 — Sector operating model and critical dependencies
 
@@ -57,7 +58,9 @@ Silobreaker prompt
 
 &#x20;Copy
 
+```
 Analyse the {SECTOR} sector's critical operational processes and dependencies, distinguishing its major subsectors and business models. Identify critical IT and operational technology systems where applicable, production or service-delivery bottlenecks, single points of failure, essential suppliers, external service providers, and dependencies whose disruption could materially interrupt operations.  Assess reliance on energy, telecommunications, cloud, managed service providers, enterprise software, logistics, industrial infrastructure and other shared critical services, where relevant. Identify common dependencies capable of transmitting a single cyber incident across multiple businesses or sectors.  For each critical dependency, explain its business function, plausible cyber disruption mechanisms, potential operational consequences, availability of alternatives and importance to business continuity. Distinguish documented dependencies from general sector assumptions and provide supporting sources.  Output: a subsector dependency map, critical systems and functions, major single points of failure, and cross-sector concentration exposures.
+```
 
 ### Q02 — Historical and recent cyber incidents, including case studies
 
@@ -69,7 +72,9 @@ Silobreaker prompt
 
 &#x20;Copy
 
+```
 Conduct a comprehensive investigation of significant cyber incidents affecting the {SECTOR} sector worldwide, covering three time horizons:  1. Historical landmark incidents: identify the five most consequential documented cyberattacks, selected for business interruption, scale, financial consequences, supply-chain disruption or demonstrated security failures. 2. Last 12 months: identify major incidents, recurring attack patterns, emerging methods, affected subsectors and observable changes in attack activity. 3. Last 30 days: identify significant new incidents, campaigns and developments, stating whether each represents a new event or an update to an earlier incident.  Create a deduplicated incident register recording affected organisation, subsector, country, incident and disclosure dates, attack type, known initial access, exploited weaknesses, attacker attribution and confidence, affected systems, operational disruption, recovery duration, financial loss and regulatory consequences, where documented.  Select three particularly instructive incidents for detailed case studies covering the attack sequence, confirmed or suspected actors, exploited weaknesses, operational and financial effects, recovery, regulatory consequences and lessons for resilience.  Clearly distinguish unknown facts from confirmed findings. Avoid presenting the most publicised incidents as statistically representative. Supply primary references wherever possible.  Output: historical top-five comparison, 12-month trend analysis, 30-day developments, structured incident register and three detailed case studies.
+```
 
 ### Q03 — Threat assessment, attack pathways and exploited weaknesses
 
@@ -81,7 +86,9 @@ Silobreaker prompt
 
 &#x20;Copy
 
+```
 Perform an in-depth cyber threat assessment of the {SECTOR} sector, using the incident research and the latest credible intelligence.  Identify the five most material cyber threat scenarios affecting the sector and its subsectors. Analyse relevant threat actors and their motivations, attack frequency indicators, exploitation trends, commonly targeted systems, initial access methods, attack paths, vulnerabilities and observed tactics, techniques and procedures.  Examine documented weaknesses including identity and access management, absent or ineffective MFA, privileged access, exposed remote services, unpatched vulnerabilities, IT/OT segmentation where applicable, third-party access, detection capabilities, backup and recovery, and other sector-specific controls.  For each scenario, explain which weaknesses could enable or amplify the attack, cite documented incidents demonstrating the relationship, distinguish confirmed exploitation from hypothetical vulnerability, and describe plausible operational consequences.  Assess the direction of the threat, severity of the operational scenario, strength of the evidence and confidence in the assessment. Do not convert incident counts into probabilities without a defensible methodology.  Output: five prioritised threat scenarios, attack-pathway analysis, evidence-supported control weakness matrix, key threat metrics, trend direction and intelligence confidence.
+```
 
 ### Q04 — Cyber resilience capabilities and sector control benchmarks
 
@@ -93,7 +100,9 @@ Silobreaker prompt
 
 &#x20;Copy
 
+```
 Identify the cybersecurity and operational resilience capabilities most critical to organisations in the {SECTOR} sector.  Use authoritative cybersecurity standards, relevant sector guidance, empirical incident investigations, industry research and credible cybersecurity maturity studies.  Assess identity and access protection, MFA, vulnerability management, asset visibility, IT/OT security where relevant, network segmentation, security monitoring, incident response, third-party resilience, business continuity, disaster recovery, backup integrity, recovery testing and sector-specific safeguards.  For each capability, determine what critical operational process it protects, which observed attack pathways it mitigates, whether its absence or weakness has contributed to documented incidents, and what could happen if it fails.  Identify available sector benchmarks and recurring preparedness weaknesses. Distinguish mandatory requirements, recommended good practice and context-dependent capabilities. Avoid implying that all organisations need identical controls or that the absence of a particular technology necessarily indicates inadequate resilience.  Output: prioritised sector resilience capabilities, applicable benchmarks, documented control gaps, criticality rationale and recommended areas for improvement.
+```
 
 ### Q05 — Financial impact, disruption trends and credit transmission
 
@@ -105,7 +114,9 @@ Silobreaker prompt
 
 &#x20;Copy
 
+```
 Perform an in-depth financial and operational impact assessment of cyber incidents affecting the {SECTOR} sector worldwide.  Research the following sector-specific metrics where reliable evidence exists: average and median data breach cost; ransomware demand and actual payment; business disruption frequency and duration; average and median incident recovery time; breach identification and containment lifecycle; recovery and remediation expenditure; revenue and profit impacts; and incident cost trends over the past five years.  For every metric, state the currency, year, population, sample size where available, geographic coverage, statistical method, source and limitations. Explain when no defensible sector-specific average exists. Distinguish breach lifecycle from business interruption and operational recovery periods. Avoid treating ransom payments as total incident costs.  Analyse documented cases showing effects on production or service delivery, lost sales, EBITDA, margins, working capital, cash conversion, liquidity, capital expenditure, borrowing requirements, credit ratings, covenant headroom and debt-servicing capacity. Separate disclosed financial consequences from external estimates.  Develop illustrative one-week, four-week and eight-week disruption scenarios, adapting the scenarios to the sector's critical business processes. Explain potential financial transmission pathways, important assumptions, possible offsets such as alternative operations or insurance, and the borrower-specific data needed to assess materiality. Do not represent illustrative scenarios as historical averages or probability forecasts.  Output: financial metrics with methodological caveats, five-year trends where supportable, documented impact case studies, credit transmission analysis and illustrative disruption scenarios.
+```
 
 ### Q06 — Regulatory authorities and cyber resilience expectations
 
@@ -115,7 +126,9 @@ Silobreaker prompt
 
 &#x20;Copy
 
+```
 Identify the principal regulators, legislative frameworks, supervisory authorities, industry-specific requirements and cybersecurity or operational resilience expectations relevant to the {SECTOR} sector.  Provide a jurisdiction-by-jurisdiction analysis covering the European Union, United Kingdom and United States, including important subsector distinctions and national or state-level variations where material.  For each applicable framework, explain the regulator or competent authority, entities and activities in scope, mandatory cyber risk management and resilience obligations, incident reporting requirements, continuity and recovery expectations, third-party and supply-chain security expectations, applicable deadlines, and enforcement or supervisory consequences.  Identify recent regulatory developments, material enforcement examples, published supervisory concerns and expected changes. Distinguish legislation, binding regulatory requirements, supervisory guidance, industry standards and voluntary good practice.  Evaluate which requirements have the greatest implications for operational resilience, potential financial liabilities, business continuity and borrower credit risk.  Output: EU, UK and US jurisdictional comparison; applicability-based checklist; key resilience obligations; supervisory priorities; regulatory developments and credit-relevant consequences.
+```
 
 ### Q07 — Geopolitical cyber threats and systemic exposure
 
@@ -124,8 +137,9 @@ This preserves your geopolitical research and integrates threat-motivated target
 Silobreaker prompt
 
 &#x20;Copy
-
+```
 Assess how the current geopolitical environment is influencing cyber threats, attacker motivations, targeting patterns and resilience risks affecting the {SECTOR} sector worldwide.  Analyse relevant state-sponsored and state-aligned operations, cyberespionage, disruptive or destructive activity, geopolitically motivated hacktivism, sanctions-related targeting, regional conflicts, strategic technology competition and cyber-enabled supply-chain disruption.  Identify which subsectors, countries, critical technologies, infrastructure services and business dependencies may be disproportionately exposed. Explain the mechanism connecting geopolitical developments to credible cyber threats, rather than providing generic political commentary.  Assess the potential for cyber incidents to propagate across organisations through shared technology providers, energy systems, telecommunications, logistics, software supply chains, outsourced service providers or other sector-specific critical dependencies. Identify documented examples of correlated disruption when available.  Distinguish observed state-linked campaigns from speculative scenarios and explain attribution confidence. Identify early warning indicators and developments that could materially alter the sector threat assessment.  Output: geopolitical threat drivers, relevant observed campaigns, vulnerable subsectors and regions, systemic exposure scenarios, credit-relevant implications and early warning indicators.
+```
 
 ### Q08 — Questionnaire interoperability and Credit Officer engagement
 
@@ -137,7 +151,9 @@ Silobreaker prompt
 
 &#x20;Copy
 
+```
 Using the validated research findings for the {SECTOR} sector and the supplied corporate cyber resilience questionnaire, develop a sector-specific intelligence mapping and client discussion guide for Senior Credit Officers.  For each material questionnaire item, identify: the potential weakness indicated by an adverse response; the sector-specific threat scenarios and attack pathways it relates to; documented incidents demonstrating the relevance of the weakness; important operational dependencies; applicable regulatory resilience expectations where relevant; and plausible financial or credit consequences.  Explain the conditions that could make the weakness more or less material to a particular borrower, including business model, geography, compensating controls, operational concentration and financial resilience.  Provide two or three non-technical follow-up questions, practical resilience improvements and indicators that may warrant specialist review or closer monitoring. Prioritise the findings most likely to affect critical operations and financial resilience.  Use the actual questionnaire IDs supplied. If no questionnaire is available, produce a clearly labelled provisional mapping and do not fabricate question identifiers.  The guide must support constructive client discussions, not a cybersecurity audit. Do not treat self-reported answers as verified evidence, assume regulatory non-compliance or make automatic adverse credit judgements.  Output: questionnaire-to-threat-to-incident-to-credit mapping matrix, prioritised discussion prompts, suggested resilience improvements and escalation indicators.
+```
 
 ### Q09 — Final Sector Cyber Resilience & Credit Intelligence Report
 
@@ -147,7 +163,9 @@ Silobreaker prompt
 
 &#x20;Copy
 
+```
 Using the validated outputs of research questions Q01–Q08, prepare a professional Sector Cyber Resilience & Credit Intelligence Report for the {SECTOR} sector, designed for Senior Credit Officers assessing corporate borrowers.  The report must contain: 1. Executive sector assessment: principal findings, top risks, trend direction and implications for credit discussions. 2. Sector operating model: critical processes, digital dependencies and concentration risks. 3. Cyber threat landscape: three to five prioritised threat scenarios with documented incident evidence and relevant exploited weaknesses. 4. Geopolitical cyber exposure: material geopolitical drivers, targeting patterns and systemic dependencies. 5. Regulatory resilience expectations: relevant EU, UK and US obligations, applicability qualifications and supervisory priorities. 6. Control weakness intelligence: the security and resilience gaps most relevant to the sector, connected to observed attacks and the supplied questionnaire. 7. Operational and financial consequences: documented costs, business interruption pathways, financial sensitivity and credit transmission mechanisms. 8. Credit Officer engagement: concise, targeted client discussion prompts, practical improvement opportunities and indicators requiring follow-up.  Produce a four-page-equivalent executive report supported by a separate, traceable evidence annex. Use concise, non-technical explanations without losing analytical rigour. Make sector-specific judgements rather than generic cybersecurity statements. Distinguish sector-level risks from individual borrower materiality.  Include source references, assessment confidence, evidence cutoff, version date and unresolved research gaps. Highlight conflicts or limitations in the underlying intelligence rather than hiding them. Do not invent missing evidence or present the report as an independent audit, regulatory compliance assessment or borrower credit rating.  Output: publication-ready sector report, evidence annex and a short list of intelligence gaps requiring analyst validation.
+```
 
 ## 3. How I would operationalise this across 24 sectors
 
