@@ -45,7 +45,7 @@ Research sector: `{SECTOR}`. Geographic scope: worldwide, with EU, UK and US ana
 
 Prioritise primary sources, official incident disclosures, regulators, credible threat intelligence and financial filings. Document sources, dates, geography and confidence. Distinguish verified facts from analytical assessments or unverified allegations. Never invent financial losses, exploited weaknesses or attack attribution.
 
-Analyse relevant subsectors and business models. Explicitly identify evidence gaps and produce structured findings suitable for reuse in the credit intelligence report. ```
+Analyse relevant subsectors and business models. Explicitly identify evidence gaps and produce structured findings suitable for reuse in the credit intelligence report.```
 
 ### Q01 — Sector operating model and critical dependencies
 
