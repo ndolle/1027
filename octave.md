@@ -112,3 +112,14 @@ Before we go into the architecture, I'd like to establish something important:
 Are the 10 intelligence services currently operated by different teams, with different tools and data sources, or are they mostly initiatives within the same team?
 
 That will help determine whether Octopus should be designed primarily as a shared team capability or as a broader enterprise intelligence platform.
+
+---
+
+### Vision
+Transform fragmented intelligence activities into a unified, AI-powered platform capable of delivering multiple intelligence services through one shared, scalable ecosystem.
+
+### Core Objective
+Build a central intelligence engine that combines data collection, processing, AI-driven analysis, correlation and reporting into reusable capabilities, enabling multiple intelligence services without duplicating infrastructure or effort.
+
+### Key Outcome
+A scalable, governed intelligence platform delivering faster insights, stronger cross-domain risk correlation, reduced operational costs and accelerated development of new intelligence services.
