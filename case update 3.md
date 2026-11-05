@@ -40,7 +40,7 @@ Additional funds were transferred through cross-chain bridges, cryptocurrency ex
 
 As of the morning of 5 November, Bitquery identified approximately **$37.3 million remaining on Ethereum**, while Tether had frozen approximately $1.14 million in USDT. These figures do not represent confirmed recoverable funds.
 
-### 4. Updated Risk Assessment for BNP Paribas
+### 4. Updated Risk Assessment for 4
 
 The confirmation of a third-party entry point materially changes the initial risk interpretation.
 
@@ -50,7 +50,7 @@ This reinforces the importance of independently secured payment authorisation, t
 
 The cryptocurrency laundering activity also demonstrates how quickly stolen funds can move beyond conventional recovery mechanisms, increasing the importance of early detection and coordinated intervention.
 
-**Our current assessment remains Medium risk for BNP Paribas**, with no evidence of direct exposure or a shared compromised provider.
+**Our current assessment remains Medium risk 4**, with no evidence of direct exposure or a shared compromised provider.
 
 ### 5. Outstanding Intelligence Priorities
 
