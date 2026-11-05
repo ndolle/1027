@@ -37,15 +37,15 @@ Twelve of these wallets had received withdrawals previously, some dating back to
 
 The pattern suggests potentially pre-positioned infrastructure and coordinated activity, although the exchanges have not confirmed the identities or common ownership of the accounts.
 
-**Stage 4 – Laundering and attempted recovery (investigative findings)**
+**Stage 4 – Rapid laundering, privacy coins and recovery challenges (investigative findings)**
 
-Funds were rapidly redistributed through hundreds of wallets, converted into Ether and other assets, and moved through cryptocurrency exchanges and cross-chain services.
+The attackers rapidly redistributed the stolen funds through hundreds of cryptocurrency wallets, converting significant amounts of USDC into Ether (ETH) and subsequently moving assets through exchanges, cross-chain bridges and cryptocurrency swapping services.
 
-Bitquery identified approximately $63 million converted into Ether within four hours, significantly reducing opportunities for stablecoin issuers to freeze the proceeds.
+**Part of the proceeds was reportedly converted into Monero (XMR)** through Wagyu, a cryptocurrency swapping service identified by blockchain investigators ZachXBT and Bitquery. Unlike Bitcoin and Ethereum, Monero conceals transaction details, significantly limiting the ability of investigators to trace the subsequent movement or ultimate destination of the funds.
 
-At 08:47 UTC on 5 November, investigators identified approximately $37.3 million remaining in associated Ethereum wallets. Tether had frozen approximately $1.14 million in USDT.
+The attackers' use of Ether, cross-chain bridges and privacy-focused cryptocurrency illustrates a deliberate effort to complicate tracing and reduce opportunities for asset freezing and recovery.
 
-These figures do not represent confirmed recoverable amounts. Kraken and Crypto.com have also reported taking restrictive measures against accounts associated with the incident, while denying compromise of their own platforms.
+At 08:47 UTC on 5 November, Bitquery identified approximately $37.3 million remaining in associated Ethereum wallets. The amount converted into Monero and its ultimate destination have not been established.
 
 ### 3. KEY DEVELOPMENTS AND TIMELINE
 
