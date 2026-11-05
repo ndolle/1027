@@ -91,7 +91,7 @@ The incident may also generate impersonation, phishing or fraudulent account-pro
 
 **Immediate – Next 24–48 hours**
 
-1. **Digital Assets Operations / CISO:** Confirm whether relevant BNP Paribas entities maintain institutional cryptocurrency exchange or custody accounts, including their access models, API permissions and withdrawal controls.
+1. **Digital Assets Operations / CISO:** Confirm whether relevant -------------- entities maintain institutional cryptocurrency exchange or custody accounts, including their access models, API permissions and withdrawal controls.
 2. **CISO / Third-Party Risk:** Identify external providers with the technical ability to initiate or influence high-value payment transactions, and confirm the existence of independent authorisation safeguards.
 3. **Fraud Operations / SOC:** Assess whether monitoring can detect sudden increases in transaction value or velocity, new beneficiaries, abnormal withdrawal patterns and unusual changes to privileged access.
 4. **CTI / Fraud Prevention:** Monitor for related phishing, impersonation campaigns and emerging technical indicators associated with the incident.
