@@ -9,7 +9,7 @@ Blockchain investigations have traced approximately $126 million in cryptocurren
 
 **Key concern for --------------:** The incident illustrates how a compromise of a trusted third-party platform could potentially enable large-scale financial fraud, particularly where external connectivity, payment authorisation and transaction-monitoring controls are insufficiently independent.
 
-No direct exposure or technical vulnerability affecting BNP Paribas has been identified.
+No direct exposure or technical vulnerability affecting ------------- has been identified.
 
 ### 2. ATTACK MODUS OPERANDI
 
@@ -73,7 +73,7 @@ French judicial authorities have opened an investigation, and the bank has infor
 
 **Direct exposure – Not identified**
 
-No evidence currently indicates that BNP Paribas systems, customers or assets were affected. There is also no confirmed shared vulnerability or compromised supplier relationship.
+No evidence currently indicates that ------------ systems, customers or assets were affected. There is also no confirmed shared vulnerability or compromised supplier relationship.
 
 **Third-party and payment infrastructure – Relevant**
 
