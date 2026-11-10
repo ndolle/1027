@@ -1,0 +1,618 @@
+Subject: Finance & AI Briefing | FIN-AI-2026-45 | 9 November 2026
+X-Unsent: 1
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============3449895559625818544=="
+
+--===============3449895559625818544==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+# Finance & AI Briefing
+
+**FIN-AI-2026-45** =C2=B7 9 November 2026 =C2=B7 Covering 2=E2=80=938 Novembe=
+r 2026
+
+---
+
+### 1. WHAT CHANGED
+
+**US banking supervision is putting AI autonomy and consequences at the centr=
+e of examination planning.**
+
+Reporting published on 5 November describes an Office of the Comptroller of t=
+he Currency supervisory framework for assessing banks=E2=80=99 use of artific=
+ial intelligence in normal-course business activities. Examinations are to re=
+flect the bank=E2=80=99s size, complexity and risk profile, alongside the con=
+sequences, autonomy and complexity of individual AI applications. The report =
+does not specify the framework=E2=80=99s issuance date.[1](https://my.silobre=
+aker.com/v2/document/5_2281859248377823232)
+
+The structural implication is a move beyond treating AI as one technology cat=
+egory. A drafting assistant and an agent permitted to initiate financial acti=
+ons create different control exposures, even when they use the same underlyin=
+g model. An inventory organised only by vendor or model name cannot explain t=
+hose differences.
+
+For banking management, the resulting exposure spans operational losses, cust=
+omer redress and the evidence available after a disputed decision. Model accu=
+racy remains relevant, but authority, escalation and traceability become equa=
+lly important parts of the control record.
+
+=E2=86=92 If you do one thing this week: Audit the percentage of production A=
+I applications whose inventory records both permitted actions and the account=
+able business owner.
+
+
+
+Independent Community Bankers of America
+
+
+
+### 2. MODEL RACE
+
+*Evaluating foundation model releases through enterprise cost, security, and =
+data sovereignty.*
+
+#### **THINKING MACHINES LAB: Inkling 2 Small**
+
+
+
+New model and architecture developments
+
+
+
+Released on 5 November, the 594-billion-parameter model supports text and ima=
+ges through Tinker. Weights remained closed pending safety tests, with Apache=
+ 2.0 release planned. Reporting supplies neither token pricing nor residency =
+commitments; its intelligence benchmark result does not establish reduced hal=
+lucination rates in banking workflows.[2](https://my.silobreaker.com/v2/docum=
+ent/5_2281861551822471172)&#x20;
+
+Read more
+
+
+
+#### **RICURSIVE INTELLIGENCE: Ripple-65B Preview**
+
+
+
+Open-weight coding architecture
+
+
+
+Released on 4 November with open weights, Ripple-65B Preview targets coding a=
+nd hardware-efficient execution on Nvidia systems. The developer reports codi=
+ng strength, but independent evaluations remain absent. Reporting provides no=
+ hosted token tariff, deployment-region commitments or hallucination measurem=
+ents, leaving those procurement questions unresolved for banking buyers.[2](h=
+ttps://my.silobreaker.com/v2/document/5_2281861551822471172)&#x20;
+
+Read more
+
+
+
+#### **ZHIPU: GLM 5.3 adoption at Revolut**
+
+
+
+LLM Meter =E2=80=94 Week of Nov 5, 2026
+
+
+
+Revolut reportedly made self-hosted GLM 5.3 its default coding model for appr=
+oximately 2,000 engineers. This is an adoption milestone, not a launch announ=
+cement. The model is also available through Amazon Bedrock; reporting does no=
+t establish comparable token pricing, deployment jurisdiction or measured red=
+uctions in hallucinations.[3](https://my.silobreaker.com/v2/document/5_228185=
+9138872934409)&#x20;
+
+Read more
+
+
+
+### 3. KEY DEVELOPMENTS
+
+*Verifiable industry milestones, major peer deployments, and regulatory frame=
+work shifts.*
+
+#### **BBVA: Voice agents enter production testing**
+
+
+
+BBVA puts AI agents=E2=80=99 controls to the test
+
+
+
+Reporting on 3 November described production pilots in Peru and Mexico where =
+BBVA said voice agents resolved close to 90% of interactions. The published a=
+ccount did not explain the resolution measure. It provides a deployment indic=
+ator, but not evidence of equivalent customer outcomes or complaint performan=
+ce.[4](https://my.silobreaker.com/v2/document/5_2281854186725310466)&#x20;
+
+Read more
+
+
+
+#### **SOUTH KOREA: Network-separation rules face phased removal**
+
+
+
+Fighting AI with AI
+
+
+
+Authorities plan to phase out financial-sector network-separation requirement=
+s, according to reporting on 6 November. Institutions with greater preparedne=
+ss would move first, while authorities develop a replacement security framewo=
+rk. The change concerns access to technologies including AI; it is not an unc=
+onditional removal of financial institutions=E2=80=99 security obligations.[5=
+](https://my.silobreaker.com/v2/document/5_2281860881455251464)&#x20;
+
+Read more
+
+
+
+#### **BDC: Mission AI and AI Studio launch**
+
+
+
+BDC launches two entrepreneur-led initiatives
+
+
+
+BDC launched Mission AI and AI Studio on 2 November to support business adopt=
+ion and implementation. Its disclosure also reported investments in more than=
+ 300 Canadian AI companies, directly and indirectly, representing nearly $800=
+ million as of September. That portfolio figure is not a newly announced week=
+ly commitment.[6](https://my.silobreaker.com/v2/document/5_228185253658545356=
+9)&#x20;
+
+Read more
+
+
+
+#### **DEUTSCHE BANK: Private Bank AI Academy expands training**
+
+
+
+Deutsche Bank establishes AI academy for private bankers
+
+
+
+The Private Bank=E2=80=99s AI Academy was reported on 6 November as available=
+ to approximately 3,500 employees internationally, with expansion planned to =
+more than 20,000. The figures distinguish current availability from intended =
+reach. The report does not provide a programme budget or quantified evidence =
+of resulting productivity improvements.[7](https://my.silobreaker.com/v2/docu=
+ment/5_2281861299845464071)&#x20;
+
+Read more
+
+
+
+### GROUP FOCUS
+
+*Key internal announcements and published deployments across BNP Paribas Grou=
+p and entities.*
+
+- **Markets operations reconciliation** =E2=80=94 In a published executive ac=
+count on 6 November, BNP Paribas described using AI to reconcile structured a=
+nd unstructured information. The example concerned recognising different vers=
+ions of a counterparty=E2=80=99s name across a booking system and an email. T=
+his documents a specific operational application rather than a group-wide dep=
+loyment count or quantified financial return.[8](https://my.silobreaker.com/v=
+2/document/5_2281861248087752705)&#x20;
+
+  Read more
+
+
+
+### 4. CONTROL CONSIDERATIONS
+
+- Whether each production AI application has a named business owner, an appro=
+ved purpose, documented action permissions and a reassessment trigger when it=
+s autonomy or customer impact changes? (Risk, Technology)
+- Whether transaction-capable agents operate within customer consent, payment=
+ limits and approval boundaries, with records distinguishing what the custome=
+r authorised from what the agent inferred during execution? (Payments, Legal)
+- Whether reported interaction-resolution rates exclude abandoned calls, repe=
+at contacts and unresolved complaints, and whether customer outcomes are meas=
+ured separately from automated completion of the underlying workflow? (Custom=
+er Operations, Conduct)
+- Whether self-hosted models have documented weight provenance, licence terms=
+, patch responsibilities and data-flow maps covering logs, monitoring service=
+s, administrative access and any external support connections? (Technology, S=
+ecurity)
+- Whether model-routing decisions compare total operating costs, including in=
+frastructure, validation, human review and remediation, rather than treating =
+a reduction in token expenditure as an equivalent financial saving? (Finance,=
+ Procurement)
+- Whether AI-assisted reconciliation preserves original records, identifies u=
+ncertain matches and records human overrides, allowing operations teams to re=
+construct how an exception was resolved after processing has finished? (Marke=
+ts Operations, Audit)
+- Whether employee training is connected to approved tools, role-specific per=
+missions and demonstrated competence, with attendance figures distinguished f=
+rom evidence that staff can recognise errors and escalate exceptions? (Human =
+Resources, Compliance)
+- Whether fallback arrangements have been tested when an AI service fails, lo=
+ses access to source documents or produces unsupported answers, including the=
+ capacity of human teams to absorb demand? (Operational Resilience, Business =
+Continuity)
+
+### 5. ALSO THIS WEEK
+
+- **[Talent & Workforce]** =E2=80=94 Google Cloud launched AI courses for fin=
+ancial-services and legal teams.[9](https://my.silobreaker.com/v2/document/5_=
+2281851718863945730)&#x20;
+
+  Read more
+
+- **[Regulation]** =E2=80=94 Dubai=E2=80=99s regulator highlighted AI trading=
+ risks as brokers expanded execution automation.[10](https://my.silobreaker.c=
+om/v2/document/5_2281856763672133641)&#x20;
+
+  Read more
+
+- **[Cyber & Risk]** =E2=80=94 OpenAI increased its bug-bounty payout ceiling=
+ to $172,000, including bonuses.[11](https://my.silobreaker.com/v2/document/5=
+_2281854477541572615)&#x20;
+
+  Read more
+
+- **[Core Banking & Operations]** =E2=80=94 Prudential reporting described te=
+sting answer completeness, escalation and fallback processes during its AI ro=
+llout.[12](https://my.silobreaker.com/v2/document/5_2281858532980555777)&#x20;
+
+  Read more
+
+- **[Regulation]** =E2=80=94 iCOMPASS launched KY-AI for inventorying AI syst=
+ems, assigning owners and monitoring changes.[13](https://my.silobreaker.com/=
+v2/document/5_2281852019209666563)&#x20;
+
+  Read more
+
+- **[Talent & Workforce]** =E2=80=94 Caddi research found 39 of 201 RIAs post=
+ing vacancies named an AI tool during the third quarter.[14](https://my.silob=
+reaker.com/v2/document/5_2281857286701842441)&#x20;
+
+  Read more
+
+- **[Macro & Capital]** =E2=80=94 Research found 3% of FTSE 100 companies dis=
+closed returns from AI.[15](https://my.silobreaker.com/v2/document/5_22818567=
+62162184203)&#x20;
+
+  Read more
+
+- **[Infrastructure]** =E2=80=94 Google funded Ai2 with $5 million to adapt i=
+ts weather model for climate projections.[16](https://my.silobreaker.com/v2/d=
+ocument/5_2281857163053761768)&#x20;
+
+  Read more
+
+- **[Peers]** =E2=80=94 Kenya=E2=80=99s central bank said it was exploring AI=
+ agents for operations, including payments, with human oversight.[17](https:/=
+/my.silobreaker.com/v2/document/5_2281852364132450310)&#x20;
+
+  Read more
+
+- **[Infrastructure]** =E2=80=94 Reporting described LinkedIn replacing OpenA=
+I models to keep server costs flat.[18](https://my.silobreaker.com/v2/documen=
+t/5_2281855138412888070)&#x20;
+
+  Read more
+
+
+
+--===============3449895559625818544==
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en"><head><meta charset=3D"UTF-8"><meta name=3D"=
+viewport" content=3D"width=3Ddevice-width,initial-scale=3D1"><title>Finance &=
+amp; AI Briefing =E2=80=94 FIN-AI-2026-45</title><style>body{margin:0;padding=
+:0}table{border-collapse:separate}a{overflow-wrap:break-word}@media only scre=
+en and (max-width:650px){.shell{width:100%!important}.content{padding:18px!im=
+portant}.outer{padding:10px!important}}</style></head>
+<body style=3D"margin:0;padding:0;background:#f3f6f4;font-family:Arial,Helvet=
+ica,sans-serif;"><table role=3D"presentation" width=3D"100%" cellpadding=3D"0=
+" cellspacing=3D"0" border=3D"0" style=3D"width:100%;background:#f3f6f4;"><tr=
+><td class=3D"outer" align=3D"center" style=3D"padding:24px 16px;">
+<!--[if mso]><table role=3D"presentation" width=3D"1250" cellpadding=3D"0" ce=
+llspacing=3D"0" border=3D"0"><tr><td><![endif]-->
+<table role=3D"presentation" class=3D"shell" width=3D"100%" cellpadding=3D"0"=
+ cellspacing=3D"0" border=3D"0" style=3D"width:100%;max-width:1250px;backgrou=
+nd:#ffffff;border:1px solid #e1e9e4;border-radius:8px;"><tr><td class=3D"cont=
+ent" style=3D"padding:32px 36px;font-family:Arial,Helvetica,sans-serif;">
+<table role=3D"presentation" width=3D"100%" cellpadding=3D"0" cellspacing=3D"=
+0" border=3D"0" style=3D"width:100%;background:#00965e;border-radius:7px;"><t=
+r><td style=3D"padding:24px 28px;color:#ffffff;"><h1 style=3D"margin:0 0 10px=
+ 0;font-size:28px;line-height:1.25;color:#ffffff;">Finance &amp; AI Briefing<=
+/h1><p style=3D"margin:0;font-size:14px;line-height:1.6;color:#ffffff;"><stro=
+ng>FIN-AI-2026-45</strong> =C2=B7 9 November 2026 =C2=B7 Covering 2=E2=80=938=
+ November 2026</p></td></tr></table><h2 style=3D"margin:28px 0 16px 0;padding=
+:0 0 8px 0;border-bottom:2px solid #00965e;color:#007b4d;font-size:17px;line-=
+height:1.4;letter-spacing:.4px;">1. WHAT CHANGED</h2><p style=3D"margin:0 0 1=
+4px 0;font-size:15px;line-height:1.65;color:#334155;"><strong>US banking supe=
+rvision is putting AI autonomy and consequences at the centre of examination =
+planning.</strong></p><p style=3D"margin:0 0 14px 0;font-size:15px;line-heigh=
+t:1.65;color:#334155;">Reporting published on 5 November describes an Office =
+of the Comptroller of the Currency supervisory framework for assessing banks=
+=E2=80=99 use of artificial intelligence in normal-course business activities=
+. Examinations are to reflect the bank=E2=80=99s size, complexity and risk pr=
+ofile, alongside the consequences, autonomy and complexity of individual AI a=
+pplications. The report does not specify the framework=E2=80=99s issuance dat=
+e.<a href=3D"https://my.silobreaker.com/v2/document/5_2281859248377823232" st=
+yle=3D"color:#007b4d;text-decoration:underline;">1</a></p><p style=3D"margin:=
+0 0 14px 0;font-size:15px;line-height:1.65;color:#334155;">The structural imp=
+lication is a move beyond treating AI as one technology category. A drafting =
+assistant and an agent permitted to initiate financial actions create differe=
+nt control exposures, even when they use the same underlying model. An invent=
+ory organised only by vendor or model name cannot explain those differences.<=
+/p><p style=3D"margin:0 0 14px 0;font-size:15px;line-height:1.65;color:#33415=
+5;">For banking management, the resulting exposure spans operational losses, =
+customer redress and the evidence available after a disputed decision. Model =
+accuracy remains relevant, but authority, escalation and traceability become =
+equally important parts of the control record.</p><p style=3D"margin:0 0 14px=
+ 0;font-size:15px;line-height:1.65;color:#334155;">=E2=86=92 If you do one th=
+ing this week: Audit the percentage of production AI applications whose inven=
+tory records both permitted actions and the accountable business owner.</p><p=
+ style=3D"margin:0 0 14px 0;font-size:15px;line-height:1.65;color:#334155;">I=
+ndependent Community Bankers of America</p><h2 style=3D"margin:28px 0 16px 0;=
+padding:0 0 8px 0;border-bottom:2px solid #00965e;color:#007b4d;font-size:17p=
+x;line-height:1.4;letter-spacing:.4px;">2. MODEL RACE</h2><p style=3D"margin:=
+0 0 14px 0;font-size:15px;line-height:1.65;color:#334155;"><em>Evaluating fou=
+ndation model releases through enterprise cost, security, and data sovereignt=
+y.</em></p><table role=3D"presentation" width=3D"100%" cellpadding=3D"0" cell=
+spacing=3D"0" border=3D"0" style=3D"width:100%;margin:0 0 16px 0;border:1px s=
+olid #dce7e1;background:#ffffff;border-radius:6px;"><tr><td style=3D"padding:=
+20px 24px;"><h3 style=3D"margin:0 0 12px 0;color:#0f3d2d;font-size:16px;line-=
+height:1.45;"><strong>THINKING MACHINES LAB: Inkling 2 Small</strong></h3><p =
+style=3D"margin:0 0 14px 0;font-size:15px;line-height:1.65;color:#334155;">Ne=
+w model and architecture developments</p><p style=3D"margin:0 0 14px 0;font-s=
+ize:15px;line-height:1.65;color:#334155;">Released on 5 November, the 594-bil=
+lion-parameter model supports text and images through Tinker. Weights remaine=
+d closed pending safety tests, with Apache 2.0 release planned. Reporting sup=
+plies neither token pricing nor residency commitments; its intelligence bench=
+mark result does not establish reduced hallucination rates in banking workflo=
+ws.<a href=3D"https://my.silobreaker.com/v2/document/5_2281861551822471172" s=
+tyle=3D"color:#007b4d;text-decoration:underline;">2</a> </p><p style=3D"margi=
+n:0 0 14px 0;font-size:15px;line-height:1.65;color:#334155;"><a href=3D"https=
+://my.silobreaker.com/v2/document/5_2281861551822471172" style=3D"color:#007b=
+4d;text-decoration:underline;">Read more</a></p></td></tr></table><table role=
+=3D"presentation" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" style=3D"width:100%;margin:0 0 16px 0;border:1px solid #dce7e1;backgro=
+und:#ffffff;border-radius:6px;"><tr><td style=3D"padding:20px 24px;"><h3 styl=
+e=3D"margin:0 0 12px 0;color:#0f3d2d;font-size:16px;line-height:1.45;"><stron=
+g>RICURSIVE INTELLIGENCE: Ripple-65B Preview</strong></h3><p style=3D"margin:=
+0 0 14px 0;font-size:15px;line-height:1.65;color:#334155;">Open-weight coding=
+ architecture</p><p style=3D"margin:0 0 14px 0;font-size:15px;line-height:1.6=
+5;color:#334155;">Released on 4 November with open weights, Ripple-65B Previe=
+w targets coding and hardware-efficient execution on Nvidia systems. The deve=
+loper reports coding strength, but independent evaluations remain absent. Rep=
+orting provides no hosted token tariff, deployment-region commitments or hall=
+ucination measurements, leaving those procurement questions unresolved for ba=
+nking buyers.<a href=3D"https://my.silobreaker.com/v2/document/5_228186155182=
+2471172" style=3D"color:#007b4d;text-decoration:underline;">2</a> </p><p styl=
+e=3D"margin:0 0 14px 0;font-size:15px;line-height:1.65;color:#334155;"><a hre=
+f=3D"https://my.silobreaker.com/v2/document/5_2281861551822471172" style=3D"c=
+olor:#007b4d;text-decoration:underline;">Read more</a></p></td></tr></table><=
+table role=3D"presentation" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0=
+" border=3D"0" style=3D"width:100%;margin:0 0 16px 0;border:1px solid #dce7e1=
+;background:#ffffff;border-radius:6px;"><tr><td style=3D"padding:20px 24px;">=
+<h3 style=3D"margin:0 0 12px 0;color:#0f3d2d;font-size:16px;line-height:1.45;=
+"><strong>ZHIPU: GLM 5.3 adoption at Revolut</strong></h3><p style=3D"margin:=
+0 0 14px 0;font-size:15px;line-height:1.65;color:#334155;">LLM Meter =E2=80=
+=94 Week of Nov 5, 2026</p><p style=3D"margin:0 0 14px 0;font-size:15px;line-=
+height:1.65;color:#334155;">Revolut reportedly made self-hosted GLM 5.3 its d=
+efault coding model for approximately 2,000 engineers. This is an adoption mi=
+lestone, not a launch announcement. The model is also available through Amazo=
+n Bedrock; reporting does not establish comparable token pricing, deployment =
+jurisdiction or measured reductions in hallucinations.<a href=3D"https://my.s=
+ilobreaker.com/v2/document/5_2281859138872934409" style=3D"color:#007b4d;text=
+-decoration:underline;">3</a> </p><p style=3D"margin:0 0 14px 0;font-size:15p=
+x;line-height:1.65;color:#334155;"><a href=3D"https://my.silobreaker.com/v2/d=
+ocument/5_2281859138872934409" style=3D"color:#007b4d;text-decoration:underli=
+ne;">Read more</a></p></td></tr></table><h2 style=3D"margin:28px 0 16px 0;pad=
+ding:0 0 8px 0;border-bottom:2px solid #00965e;color:#007b4d;font-size:17px;l=
+ine-height:1.4;letter-spacing:.4px;">3. KEY DEVELOPMENTS</h2><p style=3D"marg=
+in:0 0 14px 0;font-size:15px;line-height:1.65;color:#334155;"><em>Verifiable =
+industry milestones, major peer deployments, and regulatory framework shifts.=
+</em></p><table role=3D"presentation" width=3D"100%" cellpadding=3D"0" cellsp=
+acing=3D"0" border=3D"0" style=3D"width:100%;margin:0 0 16px 0;border:1px sol=
+id #dce7e1;background:#ffffff;border-radius:6px;"><tr><td style=3D"padding:20=
+px 24px;"><h3 style=3D"margin:0 0 12px 0;color:#0f3d2d;font-size:16px;line-he=
+ight:1.45;"><strong>BBVA: Voice agents enter production testing</strong></h3>=
+<p style=3D"margin:0 0 14px 0;font-size:15px;line-height:1.65;color:#334155;"=
+>BBVA puts AI agents=E2=80=99 controls to the test</p><p style=3D"margin:0 0 =
+14px 0;font-size:15px;line-height:1.65;color:#334155;">Reporting on 3 Novembe=
+r described production pilots in Peru and Mexico where BBVA said voice agents=
+ resolved close to 90% of interactions. The published account did not explain=
+ the resolution measure. It provides a deployment indicator, but not evidence=
+ of equivalent customer outcomes or complaint performance.<a href=3D"https://=
+my.silobreaker.com/v2/document/5_2281854186725310466" style=3D"color:#007b4d;=
+text-decoration:underline;">4</a> </p><p style=3D"margin:0 0 14px 0;font-size=
+:15px;line-height:1.65;color:#334155;"><a href=3D"https://my.silobreaker.com/=
+v2/document/5_2281854186725310466" style=3D"color:#007b4d;text-decoration:und=
+erline;">Read more</a></p></td></tr></table><table role=3D"presentation" widt=
+h=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:10=
+0%;margin:0 0 16px 0;border:1px solid #dce7e1;background:#ffffff;border-radiu=
+s:6px;"><tr><td style=3D"padding:20px 24px;"><h3 style=3D"margin:0 0 12px 0;c=
+olor:#0f3d2d;font-size:16px;line-height:1.45;"><strong>SOUTH KOREA: Network-s=
+eparation rules face phased removal</strong></h3><p style=3D"margin:0 0 14px =
+0;font-size:15px;line-height:1.65;color:#334155;">Fighting AI with AI</p><p s=
+tyle=3D"margin:0 0 14px 0;font-size:15px;line-height:1.65;color:#334155;">Aut=
+horities plan to phase out financial-sector network-separation requirements, =
+according to reporting on 6 November. Institutions with greater preparedness =
+would move first, while authorities develop a replacement security framework.=
+ The change concerns access to technologies including AI; it is not an uncond=
+itional removal of financial institutions=E2=80=99 security obligations.<a hr=
+ef=3D"https://my.silobreaker.com/v2/document/5_2281860881455251464" style=3D"=
+color:#007b4d;text-decoration:underline;">5</a> </p><p style=3D"margin:0 0 14=
+px 0;font-size:15px;line-height:1.65;color:#334155;"><a href=3D"https://my.si=
+lobreaker.com/v2/document/5_2281860881455251464" style=3D"color:#007b4d;text-=
+decoration:underline;">Read more</a></p></td></tr></table><table role=3D"pres=
+entation" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" sty=
+le=3D"width:100%;margin:0 0 16px 0;border:1px solid #dce7e1;background:#fffff=
+f;border-radius:6px;"><tr><td style=3D"padding:20px 24px;"><h3 style=3D"margi=
+n:0 0 12px 0;color:#0f3d2d;font-size:16px;line-height:1.45;"><strong>BDC: Mis=
+sion AI and AI Studio launch</strong></h3><p style=3D"margin:0 0 14px 0;font-=
+size:15px;line-height:1.65;color:#334155;">BDC launches two entrepreneur-led =
+initiatives</p><p style=3D"margin:0 0 14px 0;font-size:15px;line-height:1.65;=
+color:#334155;">BDC launched Mission AI and AI Studio on 2 November to suppor=
+t business adoption and implementation. Its disclosure also reported investme=
+nts in more than 300 Canadian AI companies, directly and indirectly, represen=
+ting nearly $800 million as of September. That portfolio figure is not a newl=
+y announced weekly commitment.<a href=3D"https://my.silobreaker.com/v2/docume=
+nt/5_2281852536585453569" style=3D"color:#007b4d;text-decoration:underline;">=
+6</a> </p><p style=3D"margin:0 0 14px 0;font-size:15px;line-height:1.65;color=
+:#334155;"><a href=3D"https://my.silobreaker.com/v2/document/5_22818525365854=
+53569" style=3D"color:#007b4d;text-decoration:underline;">Read more</a></p></=
+td></tr></table><table role=3D"presentation" width=3D"100%" cellpadding=3D"0"=
+ cellspacing=3D"0" border=3D"0" style=3D"width:100%;margin:0 0 16px 0;border:=
+1px solid #dce7e1;background:#ffffff;border-radius:6px;"><tr><td style=3D"pad=
+ding:20px 24px;"><h3 style=3D"margin:0 0 12px 0;color:#0f3d2d;font-size:16px;=
+line-height:1.45;"><strong>DEUTSCHE BANK: Private Bank AI Academy expands tra=
+ining</strong></h3><p style=3D"margin:0 0 14px 0;font-size:15px;line-height:1=
+.65;color:#334155;">Deutsche Bank establishes AI academy for private bankers<=
+/p><p style=3D"margin:0 0 14px 0;font-size:15px;line-height:1.65;color:#33415=
+5;">The Private Bank=E2=80=99s AI Academy was reported on 6 November as avail=
+able to approximately 3,500 employees internationally, with expansion planned=
+ to more than 20,000. The figures distinguish current availability from inten=
+ded reach. The report does not provide a programme budget or quantified evide=
+nce of resulting productivity improvements.<a href=3D"https://my.silobreaker.=
+com/v2/document/5_2281861299845464071" style=3D"color:#007b4d;text-decoration=
+:underline;">7</a> </p><p style=3D"margin:0 0 14px 0;font-size:15px;line-heig=
+ht:1.65;color:#334155;"><a href=3D"https://my.silobreaker.com/v2/document/5_2=
+281861299845464071" style=3D"color:#007b4d;text-decoration:underline;">Read m=
+ore</a></p></td></tr></table><h2 style=3D"margin:28px 0 16px 0;padding:0 0 8p=
+x 0;border-bottom:2px solid #00965e;color:#007b4d;font-size:17px;line-height:=
+1.4;letter-spacing:.4px;">GROUP FOCUS</h2><p style=3D"margin:0 0 14px 0;font-=
+size:15px;line-height:1.65;color:#334155;"><em>Key internal announcements and=
+ published deployments across BNP Paribas Group and entities.</em></p><ul sty=
+le=3D"margin:0 0 16px 0;padding-left:24px;font-size:15px;line-height:1.65;col=
+or:#334155;"><li style=3D"margin:0 0 12px 0;padding-left:4px;"><strong>Market=
+s operations reconciliation</strong> =E2=80=94 In a published executive accou=
+nt on 6 November, BNP Paribas described using AI to reconcile structured and =
+unstructured information. The example concerned recognising different version=
+s of a counterparty=E2=80=99s name across a booking system and an email. This=
+ documents a specific operational application rather than a group-wide deploy=
+ment count or quantified financial return.<a href=3D"https://my.silobreaker.c=
+om/v2/document/5_2281861248087752705" style=3D"color:#007b4d;text-decoration:=
+underline;">8</a> </li><p style=3D"margin:0 0 14px 0;font-size:15px;line-heig=
+ht:1.65;color:#334155;"><a href=3D"https://my.silobreaker.com/v2/document/5_2=
+281861248087752705" style=3D"color:#007b4d;text-decoration:underline;">Read m=
+ore</a></p></ul><h2 style=3D"margin:28px 0 16px 0;padding:0 0 8px 0;border-bo=
+ttom:2px solid #00965e;color:#007b4d;font-size:17px;line-height:1.4;letter-sp=
+acing:.4px;">4. CONTROL CONSIDERATIONS</h2><ul style=3D"margin:0 0 16px 0;pad=
+ding-left:24px;font-size:15px;line-height:1.65;color:#334155;"><li style=3D"m=
+argin:0 0 12px 0;padding-left:4px;">Whether each production AI application ha=
+s a named business owner, an approved purpose, documented action permissions =
+and a reassessment trigger when its autonomy or customer impact changes? (Ris=
+k, Technology)</li><li style=3D"margin:0 0 12px 0;padding-left:4px;">Whether =
+transaction-capable agents operate within customer consent, payment limits an=
+d approval boundaries, with records distinguishing what the customer authoris=
+ed from what the agent inferred during execution? (Payments, Legal)</li><li s=
+tyle=3D"margin:0 0 12px 0;padding-left:4px;">Whether reported interaction-res=
+olution rates exclude abandoned calls, repeat contacts and unresolved complai=
+nts, and whether customer outcomes are measured separately from automated com=
+pletion of the underlying workflow? (Customer Operations, Conduct)</li><li st=
+yle=3D"margin:0 0 12px 0;padding-left:4px;">Whether self-hosted models have d=
+ocumented weight provenance, licence terms, patch responsibilities and data-f=
+low maps covering logs, monitoring services, administrative access and any ex=
+ternal support connections? (Technology, Security)</li><li style=3D"margin:0 =
+0 12px 0;padding-left:4px;">Whether model-routing decisions compare total ope=
+rating costs, including infrastructure, validation, human review and remediat=
+ion, rather than treating a reduction in token expenditure as an equivalent f=
+inancial saving? (Finance, Procurement)</li><li style=3D"margin:0 0 12px 0;pa=
+dding-left:4px;">Whether AI-assisted reconciliation preserves original record=
+s, identifies uncertain matches and records human overrides, allowing operati=
+ons teams to reconstruct how an exception was resolved after processing has f=
+inished? (Markets Operations, Audit)</li><li style=3D"margin:0 0 12px 0;paddi=
+ng-left:4px;">Whether employee training is connected to approved tools, role-=
+specific permissions and demonstrated competence, with attendance figures dis=
+tinguished from evidence that staff can recognise errors and escalate excepti=
+ons? (Human Resources, Compliance)</li><li style=3D"margin:0 0 12px 0;padding=
+-left:4px;">Whether fallback arrangements have been tested when an AI service=
+ fails, loses access to source documents or produces unsupported answers, inc=
+luding the capacity of human teams to absorb demand? (Operational Resilience,=
+ Business Continuity)</li></ul><h2 style=3D"margin:28px 0 16px 0;padding:0 0 =
+8px 0;border-bottom:2px solid #00965e;color:#007b4d;font-size:17px;line-heigh=
+t:1.4;letter-spacing:.4px;">5. ALSO THIS WEEK</h2><ul style=3D"margin:0 0 16p=
+x 0;padding-left:24px;font-size:15px;line-height:1.65;color:#334155;"><li sty=
+le=3D"margin:0 0 12px 0;padding-left:4px;"><strong>[Talent &amp; Workforce]</=
+strong> =E2=80=94 Google Cloud launched AI courses for financial-services and=
+ legal teams.<a href=3D"https://my.silobreaker.com/v2/document/5_228185171886=
+3945730" style=3D"color:#007b4d;text-decoration:underline;">9</a> </li><p sty=
+le=3D"margin:0 0 14px 0;font-size:15px;line-height:1.65;color:#334155;"><a hr=
+ef=3D"https://my.silobreaker.com/v2/document/5_2281851718863945730" style=3D"=
+color:#007b4d;text-decoration:underline;">Read more</a></p><li style=3D"margi=
+n:0 0 12px 0;padding-left:4px;"><strong>[Regulation]</strong> =E2=80=94 Dubai=
+=E2=80=99s regulator highlighted AI trading risks as brokers expanded executi=
+on automation.<a href=3D"https://my.silobreaker.com/v2/document/5_22818567636=
+72133641" style=3D"color:#007b4d;text-decoration:underline;">10</a> </li><p s=
+tyle=3D"margin:0 0 14px 0;font-size:15px;line-height:1.65;color:#334155;"><a =
+href=3D"https://my.silobreaker.com/v2/document/5_2281856763672133641" style=
+=3D"color:#007b4d;text-decoration:underline;">Read more</a></p><li style=3D"m=
+argin:0 0 12px 0;padding-left:4px;"><strong>[Cyber &amp; Risk]</strong> =E2=
+=80=94 OpenAI increased its bug-bounty payout ceiling to $172,000, including =
+bonuses.<a href=3D"https://my.silobreaker.com/v2/document/5_22818544775415726=
+15" style=3D"color:#007b4d;text-decoration:underline;">11</a> </li><p style=
+=3D"margin:0 0 14px 0;font-size:15px;line-height:1.65;color:#334155;"><a href=
+=3D"https://my.silobreaker.com/v2/document/5_2281854477541572615" style=3D"co=
+lor:#007b4d;text-decoration:underline;">Read more</a></p><li style=3D"margin:=
+0 0 12px 0;padding-left:4px;"><strong>[Core Banking &amp; Operations]</strong=
+> =E2=80=94 Prudential reporting described testing answer completeness, escal=
+ation and fallback processes during its AI rollout.<a href=3D"https://my.silo=
+breaker.com/v2/document/5_2281858532980555777" style=3D"color:#007b4d;text-de=
+coration:underline;">12</a> </li><p style=3D"margin:0 0 14px 0;font-size:15px=
+;line-height:1.65;color:#334155;"><a href=3D"https://my.silobreaker.com/v2/do=
+cument/5_2281858532980555777" style=3D"color:#007b4d;text-decoration:underlin=
+e;">Read more</a></p><li style=3D"margin:0 0 12px 0;padding-left:4px;"><stron=
+g>[Regulation]</strong> =E2=80=94 iCOMPASS launched KY-AI for inventorying AI=
+ systems, assigning owners and monitoring changes.<a href=3D"https://my.silob=
+reaker.com/v2/document/5_2281852019209666563" style=3D"color:#007b4d;text-dec=
+oration:underline;">13</a> </li><p style=3D"margin:0 0 14px 0;font-size:15px;=
+line-height:1.65;color:#334155;"><a href=3D"https://my.silobreaker.com/v2/doc=
+ument/5_2281852019209666563" style=3D"color:#007b4d;text-decoration:underline=
+;">Read more</a></p><li style=3D"margin:0 0 12px 0;padding-left:4px;"><strong=
+>[Talent &amp; Workforce]</strong> =E2=80=94 Caddi research found 39 of 201 R=
+IAs posting vacancies named an AI tool during the third quarter.<a href=3D"ht=
+tps://my.silobreaker.com/v2/document/5_2281857286701842441" style=3D"color:#0=
+07b4d;text-decoration:underline;">14</a> </li><p style=3D"margin:0 0 14px 0;f=
+ont-size:15px;line-height:1.65;color:#334155;"><a href=3D"https://my.silobrea=
+ker.com/v2/document/5_2281857286701842441" style=3D"color:#007b4d;text-decora=
+tion:underline;">Read more</a></p><li style=3D"margin:0 0 12px 0;padding-left=
+:4px;"><strong>[Macro &amp; Capital]</strong> =E2=80=94 Research found 3% of =
+FTSE 100 companies disclosed returns from AI.<a href=3D"https://my.silobreake=
+r.com/v2/document/5_2281856762162184203" style=3D"color:#007b4d;text-decorati=
+on:underline;">15</a> </li><p style=3D"margin:0 0 14px 0;font-size:15px;line-=
+height:1.65;color:#334155;"><a href=3D"https://my.silobreaker.com/v2/document=
+/5_2281856762162184203" style=3D"color:#007b4d;text-decoration:underline;">Re=
+ad more</a></p><li style=3D"margin:0 0 12px 0;padding-left:4px;"><strong>[Inf=
+rastructure]</strong> =E2=80=94 Google funded Ai2 with $5 million to adapt it=
+s weather model for climate projections.<a href=3D"https://my.silobreaker.com=
+/v2/document/5_2281857163053761768" style=3D"color:#007b4d;text-decoration:un=
+derline;">16</a> </li><p style=3D"margin:0 0 14px 0;font-size:15px;line-heigh=
+t:1.65;color:#334155;"><a href=3D"https://my.silobreaker.com/v2/document/5_22=
+81857163053761768" style=3D"color:#007b4d;text-decoration:underline;">Read mo=
+re</a></p><li style=3D"margin:0 0 12px 0;padding-left:4px;"><strong>[Peers]</=
+strong> =E2=80=94 Kenya=E2=80=99s central bank said it was exploring AI agent=
+s for operations, including payments, with human oversight.<a href=3D"https:/=
+/my.silobreaker.com/v2/document/5_2281852364132450310" style=3D"color:#007b4d=
+;text-decoration:underline;">17</a> </li><p style=3D"margin:0 0 14px 0;font-s=
+ize:15px;line-height:1.65;color:#334155;"><a href=3D"https://my.silobreaker.c=
+om/v2/document/5_2281852364132450310" style=3D"color:#007b4d;text-decoration:=
+underline;">Read more</a></p><li style=3D"margin:0 0 12px 0;padding-left:4px;=
+"><strong>[Infrastructure]</strong> =E2=80=94 Reporting described LinkedIn re=
+placing OpenAI models to keep server costs flat.<a href=3D"https://my.silobre=
+aker.com/v2/document/5_2281855138412888070" style=3D"color:#007b4d;text-decor=
+ation:underline;">18</a> </li><p style=3D"margin:0 0 14px 0;font-size:15px;li=
+ne-height:1.65;color:#334155;"><a href=3D"https://my.silobreaker.com/v2/docum=
+ent/5_2281855138412888070" style=3D"color:#007b4d;text-decoration:underline;"=
+>Read more</a></p></ul></td></tr></table><!--[if mso]></td></tr></table><![en=
+dif]--></td></tr></table></body></html>
+
+--===============3449895559625818544==--
