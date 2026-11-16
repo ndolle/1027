@@ -1,0 +1,867 @@
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Banking Cyber Resilience & Credit Intelligence</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout concept: a security-printed document. Banknote paper, intaglio ink, guilloche line work,
+   serial-number labels. Twelve plates in four movements, each with one drawn exhibit. */
+:root{
+  --paper:#EDF1EB; --panel:#E2E8E0; --ink:#10302E; --muted:#4A625D; --line:#B7C5BD;
+  --plum:#7A2E52; --blue:#2A5C8A; --ochre:#8F6412; --foil:#9A7A2E;
+  --f-display:"Bodoni Moda","Didot","Bodoni MT",Georgia,serif;
+  --f-body:"Instrument Sans","Segoe UI",system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0B1E1D; --panel:#122A29; --ink:#DDE9E2; --muted:#9BB2AB; --line:#2D4845;
+    --plum:#E38FB4; --blue:#8FBBE8; --ochre:#E0B45E; --foil:#D2B56C; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0B1E1D; --panel:#122A29; --ink:#DDE9E2; --muted:#9BB2AB; --line:#2D4845;
+  --plum:#E38FB4; --blue:#8FBBE8; --ochre:#E0B45E; --foil:#D2B56C; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 var(--f-body);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1160px;margin-inline:auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+a{color:inherit;text-decoration-color:var(--plum);text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--plum);outline-offset:3px}
+p{margin:0}
+h1,h2,h3,h4{margin:0;font-weight:500;text-wrap:balance}
+canvas{display:block;width:100%}
+
+/* utility type */
+.k{font:500 .72rem/1.4 var(--f-mono);letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.num{font-variant-numeric:tabular-nums}
+.ev{display:inline-block;font:500 .66rem/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;padding:.3em .5em;border:1px solid currentColor;white-space:nowrap}
+.ev.doc{color:var(--ink)} .ev.sup{color:var(--blue)} .ev.sur{color:var(--ochre)} .ev.ill{color:var(--plum)} .ev.clm{color:var(--muted);border-style:dashed}
+.small{font-size:.875rem;color:var(--muted);line-height:1.5}
+.cols{display:grid;gap:28px}
+.c2{grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.c3{grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr))}
+.c4{grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr))}
+.cols>*{min-width:0}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.9rem;line-height:1.45}
+th{font:500 .68rem/1.3 var(--f-mono);letter-spacing:.09em;text-transform:uppercase;color:var(--muted);text-align:left;padding:0 .9rem .6rem 0;vertical-align:bottom}
+td{border-top:1px solid var(--line);padding:.75rem .9rem .75rem 0;vertical-align:top}
+td:first-child{font-weight:600}
+.frame{border:1px solid var(--ink);outline:1px solid var(--line);outline-offset:5px;padding:22px;margin:6px}
+
+/* hero */
+.hero{padding-block:44px 28px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.hero-grid>*{min-width:0}
+.serial{display:flex;flex-wrap:wrap;gap:6px 22px;justify-content:space-between;padding-bottom:14px;border-bottom:1px solid var(--ink);margin-bottom:34px}
+h1{font-family:var(--f-display);font-size:clamp(3.4rem,10vw,7.4rem);line-height:.88;letter-spacing:-.02em}
+h1 em{display:block;font-size:.34em;line-height:1.15;letter-spacing:0;font-weight:400;color:var(--plum);margin-top:.5em}
+.hero .lede{font-size:1.12rem;max-width:56ch;margin-top:26px}
+.rosette{position:relative;max-width:480px;margin-inline:auto;width:100%}
+.rosette canvas{aspect-ratio:1}
+.rosette .seal{position:absolute;inset:0;display:grid;place-content:center;text-align:center;gap:2px}
+.rosette .seal b{font:500 2.6rem/1 var(--f-display)}
+.meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:0;margin-top:40px;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.meta div{padding:14px 16px 14px 0}
+.meta dd{margin:4px 0 0;font-weight:600;line-height:1.35}
+.meta dt{margin:0}
+.toc{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:24px;margin-top:30px;padding:0;list-style:none}
+.toc h3{font:italic 500 1.35rem/1.2 var(--f-display);margin:4px 0 6px}
+.toc a{display:block;text-decoration:none;font-size:.9rem;padding:2px 0}
+.toc a:hover{text-decoration:underline}
+.toc a span{font-family:var(--f-mono);font-size:.75rem;color:var(--muted);margin-right:.6em}
+
+/* plates */
+.move{padding-block:54px 0}
+.move-title{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap}
+.move-title h2{font:italic 400 clamp(1.9rem,4.4vw,3rem)/1.05 var(--f-display);color:var(--plum)}
+.band{height:30px;margin-top:14px}
+.plate{padding-block:56px 22px}
+.ph{display:grid;grid-template-columns:150px 1fr;gap:24px;margin-bottom:34px}
+.ph>*{min-width:0}
+.ph h2{font:500 clamp(1.8rem,4vw,2.9rem)/1.06 var(--f-display);letter-spacing:-.01em}
+.ph .lede{font-size:1.08rem;max-width:64ch;margin-top:14px}
+.ph .no b{display:block;font:400 3.4rem/1 var(--f-display);color:var(--ink);letter-spacing:0;margin-top:2px}
+h3.sub{font:italic 500 1.4rem/1.2 var(--f-display);margin:38px 0 14px}
+.note{border-top:1px solid var(--ink);margin-top:30px;padding-top:12px;max-width:78ch}
+
+/* exposure dials */
+.dial h3{font:500 1.6rem/1.1 var(--f-display)}
+.scale{display:grid;grid-template-columns:repeat(5,1fr);gap:3px;margin:14px 0 6px}
+.scale i{height:12px;border:1px solid var(--ink)}
+.scale i.on{background:var(--ink)} .scale i.rng{background:repeating-linear-gradient(135deg,var(--ink) 0 2px,transparent 2px 5px)}
+.dial .rate{font:500 .78rem/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase}
+.dial p{font-size:.92rem;line-height:1.5;margin-top:10px}
+.dial .fig{border-top:1px solid var(--line);margin-top:14px;padding-top:12px}
+.dial .fig b{font:500 1.9rem/1 var(--f-display);display:block}
+.base b{font:500 2.3rem/1 var(--f-display);display:block;margin:4px 0}
+
+/* anatomy */
+.chain{display:grid;grid-template-columns:repeat(6,1fr);border:1px solid var(--ink);min-width:760px}
+.chain div{padding:14px 12px;border-right:1px solid var(--ink);position:relative;font-weight:600;font-size:.9rem;line-height:1.3}
+.chain div:last-child{border-right:0}
+.chain div span{display:block;font:500 .68rem/1 var(--f-mono);color:var(--muted);margin-bottom:8px}
+.strata{min-width:760px;border:1px solid var(--ink);border-top:0}
+.strata div{display:grid;grid-template-columns:1.05fr 1.5fr 1.5fr;gap:18px;padding:11px 12px;border-top:1px solid var(--line);font-size:.86rem;line-height:1.45}
+.strata div:first-child{border-top:0}
+.strata div:nth-child(-n+5){background:var(--panel)}
+.strata b{font-weight:600}
+ol.spof{list-style:none;padding:0;margin:0;counter-reset:s;display:grid;gap:0}
+ol.spof li{counter-increment:s;display:grid;grid-template-columns:2.6rem 1fr;padding:12px 0;border-top:1px solid var(--line);font-size:.93rem;line-height:1.5}
+ol.spof li::before{content:counter(s);font:400 1.7rem/1 var(--f-display);color:var(--plum)}
+
+/* threats */
+.threat{display:grid;grid-template-columns:4rem 1fr;gap:6px 18px;padding:22px 0;border-top:1px solid var(--ink)}
+.threat>b{font:400 3.6rem/.9 var(--f-display);color:var(--plum)}
+.threat h3{font:500 1.35rem/1.2 var(--f-display)}
+.threat .sev{margin:8px 0 10px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.sev .ev.crit{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.path{font:.82rem/1.5 var(--f-mono);color:var(--muted);margin-top:10px}
+.threat .cols{gap:8px 28px;font-size:.92rem;line-height:1.5}
+.stat b{font:500 2.5rem/1 var(--f-display);display:block}
+.stat p{font-size:.88rem;line-height:1.45;margin-top:6px}
+.stat{border-top:1px solid var(--ink);padding-top:12px}
+
+/* geo matrix */
+.geo td{padding-right:1.1rem}
+.geo td.m{text-align:center;width:6.2rem;padding-right:.4rem}
+.geo th.m{text-align:center;padding-right:.4rem}
+.dot{display:inline-block;width:15px;height:15px;border-radius:50%;border:1.5px solid var(--ink);vertical-align:middle}
+.dot.full{background:var(--ink)} .dot.half{background:linear-gradient(90deg,var(--ink) 50%,transparent 50%)} .dot.none{border-color:var(--line)}
+.legend{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:.82rem;color:var(--muted);margin-top:14px;align-items:center}
+.legend span{display:inline-flex;gap:7px;align-items:center}
+.sw{width:12px;height:12px;display:inline-block}
+
+/* timeline */
+ol.tl{list-style:none;margin:0;padding:0}
+ol.tl li{display:grid;grid-template-columns:6.2rem 18px 1fr;gap:0 12px;position:relative;padding-bottom:16px;font-size:.92rem;line-height:1.5}
+ol.tl li::before{content:"";position:absolute;left:calc(6.2rem + 12px + 8px);top:10px;bottom:-6px;width:1px;background:var(--line)}
+ol.tl li:last-child::before{display:none}
+ol.tl time{font:500 .76rem/1.9 var(--f-mono);color:var(--muted);text-align:right}
+ol.tl i{width:13px;height:13px;margin:5px 2px 0;position:relative;z-index:1;border:1.5px solid var(--paper);outline:1px solid var(--ink)}
+i.pay,.sw.pay{background:var(--plum)} i.conf,.sw.conf{background:var(--blue)} i.avail,.sw.avail{background:var(--ochre)}
+ol.tl b{font-weight:600}
+.lesson h4{font:500 1.25rem/1.2 var(--f-display);margin-bottom:8px}
+.lesson p{font-size:.92rem;line-height:1.55}
+.lesson p.q{font:italic 400 1.12rem/1.4 var(--f-display);margin-top:12px;color:var(--plum)}
+
+/* pairs */
+.pairs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:0 28px}
+.pairs div{border-top:1px solid var(--line);padding:11px 0;font-size:.92rem;line-height:1.45}
+.pairs b{font:italic 500 1.12rem/1.3 var(--f-display);display:block}
+
+/* clocks */
+.clock{display:grid;grid-template-columns:minmax(150px,1.1fr) 2fr minmax(120px,.9fr);gap:4px 16px;align-items:center;padding:9px 0;border-top:1px solid var(--line);font-size:.88rem;line-height:1.35;min-width:680px}
+.clock .track{height:14px;position:relative;border-left:1px solid var(--ink)}
+.clock .bar{position:absolute;inset:0 auto 0 0}
+.clock b{font-weight:600}
+.clock .v{font:500 .95rem/1.2 var(--f-mono)}
+.eu{background:var(--blue)} .uk{background:var(--plum)} .us{background:var(--ochre)}
+.axis{display:grid;grid-template-columns:minmax(150px,1.1fr) 2fr minmax(120px,.9fr);gap:4px 16px;min-width:680px}
+.axis div{position:relative;height:20px;font:500 .66rem/1 var(--f-mono);color:var(--muted)}
+.axis span{position:absolute;top:4px;transform:translateX(-50%)}
+.axis span:first-child{transform:none}
+.juris h3{font:500 1.5rem/1.1 var(--f-display);margin:6px 0 10px}
+.juris{border-top:4px solid;padding-top:12px}
+.juris.e{border-color:var(--blue)} .juris.u{border-color:var(--plum)} .juris.s{border-color:var(--ochre)}
+.juris ul,.plain{margin:0;padding-left:1.1rem;font-size:.9rem;line-height:1.5}
+.juris li,.plain li{margin-bottom:6px}
+
+/* charts */
+.colchart{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;align-items:end;height:210px;border-bottom:1px solid var(--ink);padding-top:26px}
+.colchart div{background:var(--ink);position:relative;min-width:0}
+.colchart div.hl{background:var(--plum)}
+.colchart span{position:absolute;top:-22px;left:0;right:0;text-align:center;font:500 .8rem/1 var(--f-mono)}
+.colx{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;text-align:center;font:500 .72rem/2 var(--f-mono);color:var(--muted)}
+.hbar{display:grid;grid-template-columns:8.6rem 1fr 3.6rem;gap:10px;align-items:center;font-size:.86rem;padding:4px 0}
+.hbar .t{height:13px;border-left:1px solid var(--ink)}
+.hbar .t i{display:block;height:100%;background:var(--muted)}
+.hbar.hl .t i{background:var(--plum)} .hbar.hl{font-weight:600}
+.hbar .v{font:500 .8rem/1 var(--f-mono);text-align:right}
+.ledger td.r,.ledger th.r{text-align:right;white-space:nowrap}
+.ledger td.r{font:500 .92rem/1.45 var(--f-mono)}
+
+/* stress */
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:0;min-width:780px}
+.flow div{border:1px solid var(--ink);border-right:0;padding:14px 14px 16px;font-size:.84rem;line-height:1.45}
+.flow div:last-child{border-right:1px solid var(--ink);background:var(--ink);color:var(--paper)}
+.flow div:last-child .k{color:var(--paper);opacity:.75}
+.flow b{display:block;font:500 1.15rem/1.2 var(--f-display);margin:6px 0 6px}
+.stress{display:grid;grid-template-columns:6.4rem 1fr;gap:12px 16px;align-items:center}
+.stress .lab b{font:500 1.5rem/1 var(--f-display);display:block}
+.stress .row{display:flex;align-items:center;gap:12px;min-width:0}
+.stress .stack{display:flex;height:34px;border-left:1px solid var(--ink);flex:none}
+.stress .stack i{display:block;height:100%}
+.s-fee{background:var(--plum)} .s-exp{background:var(--ink)} .s-fund{background:var(--ochre)}
+.stress .tot{font:500 .9rem/1.3 var(--f-mono);white-space:nowrap}
+.stress .tot small{display:block;color:var(--muted);font-size:.74rem}
+
+/* mapping */
+.map{border-top:1px solid var(--ink);padding:26px 0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.4fr);gap:18px 34px}
+.map h3{font:500 1.55rem/1.12 var(--f-display)}
+.map .covers{font-size:.86rem;color:var(--muted);margin-top:10px;line-height:1.45}
+.map dl{margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:16px 26px}
+.map dt{margin-bottom:5px}
+.map dd{margin:0;font-size:.9rem;line-height:1.5}
+.states{display:flex;flex-wrap:wrap;gap:8px}
+.states span{border:1px solid var(--ink);padding:6px 11px;font:500 .78rem/1.2 var(--f-mono)}
+
+/* engagement */
+.ask{border-top:1px solid var(--ink);padding-top:12px}
+.ask p.q{font:italic 400 1.2rem/1.36 var(--f-display);margin:8px 0 10px}
+.ask p.w{font-size:.86rem;color:var(--muted);line-height:1.45}
+.record{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:0;border:1px solid var(--ink)}
+.record div{padding:12px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);font-size:.84rem;line-height:1.4;margin:0 -1px -1px 0}
+footer{padding-block:50px 70px;margin-top:40px;border-top:1px solid var(--ink)}
+footer h3{font:italic 500 1.3rem/1.2 var(--f-display);margin-bottom:10px}
+
+@media (max-width:820px){
+  .hero-grid{grid-template-columns:1fr}
+  .rosette{max-width:320px;order:-1}
+  .ph{grid-template-columns:1fr;gap:6px}
+  .ph .no b{display:inline;font-size:1.6rem;margin-left:.3em}
+  .map{grid-template-columns:1fr}
+  .threat{grid-template-columns:2.6rem 1fr}
+  .threat>b{font-size:2.4rem}
+  ol.tl li{grid-template-columns:4.6rem 18px 1fr}
+  ol.tl li::before{left:calc(4.6rem + 12px + 8px)}
+  .stress{grid-template-columns:1fr;gap:4px}
+  .stress .row{margin-bottom:12px}
+  .hbar{grid-template-columns:6.6rem 1fr 3.2rem}
+}
+</style>
+
+<div class="hero"><div class="wrap">
+  <div class="serial">
+    <span class="k">Sector intelligence report</span>
+    <span class="k">Series B · Banking · No. 2026/10</span>
+    <span class="k">For Senior Credit Officers</span>
+  </div>
+  <div class="hero-grid">
+    <div>
+      <p class="k">Plate 01 · Cover</p>
+      <h1>Banking<em>Cyber resilience &amp; credit intelligence</em></h1>
+      <p class="lede">A bank can be solvent and still be unable to pay. This document shows where that can happen in a banking borrower, what the record of real incidents says about it, what it costs, and how to raise it with a client during a credit process without turning the meeting into an audit.</p>
+    </div>
+    <div class="rosette">
+      <canvas data-g="rosette" aria-hidden="true"></canvas>
+      <div class="seal"><span class="k">Evidence cutoff</span><b class="num">27·X·26</b><span class="k">Version 1.0</span></div>
+    </div>
+  </div>
+  <dl class="meta">
+    <div><dt class="k">Sector</dt><dd>Banking, all business models</dd></div>
+    <div><dt class="k">Geography</dt><dd>Worldwide, with EU, UK and US comparisons</dd></div>
+    <div><dt class="k">Report date</dt><dd class="num">27 October 2026</dd></div>
+    <div><dt class="k">Incident windows</dt><dd class="num">12 months and 30 days to cutoff</dd></div>
+    <div><dt class="k">Status</dt><dd>Discussion support. Not an audit, a compliance assessment or a credit rating</dd></div>
+  </dl>
+  <ul class="toc">
+    <li><p class="k">Movement I</p><h3>Where the sector is exposed</h3>
+      <a href="#p02"><span>02</span>Sector risk snapshot</a><a href="#p03"><span>03</span>Anatomy and dependencies</a></li>
+    <li><p class="k">Movement II</p><h3>What the evidence shows</h3>
+      <a href="#p04"><span>04</span>Priority cyber threats</a><a href="#p05"><span>05</span>Geopolitical exposure</a><a href="#p06"><span>06</span>Incidents and lessons</a><a href="#p07"><span>07</span>Capabilities that matter</a></li>
+    <li><p class="k">Movement III</p><h3>What is expected, and what it costs</h3>
+      <a href="#p08"><span>08</span>Regulatory expectations</a><a href="#p09"><span>09</span>Financial impact</a><a href="#p10"><span>10</span>Cyber-to-credit stress</a></li>
+    <li><p class="k">Movement IV</p><h3>How to use it with a client</h3>
+      <a href="#p11"><span>11</span>Reading the questionnaire</a><a href="#p12"><span>12</span>Engagement and escalation</a></li>
+  </ul>
+  <div class="legend" style="margin-top:28px">
+    <span class="k">How claims are marked</span>
+    <span><i class="ev doc">Documented</i> filing, regulator or court record</span>
+    <span><i class="ev sup">Supervisory</i> exercise or finding</span>
+    <span><i class="ev sur">Survey</i> sample, not a census</span>
+    <span><i class="ev ill">Illustrative</i> assumption or scenario</span>
+    <span><i class="ev clm">Claim</i> unverified</span>
+  </div>
+</div></div>
+
+<!-- ===================== MOVEMENT I ===================== -->
+<div class="wrap move"><div class="move-title"><p class="k">Movement I · Plates 02–03</p><h2>Where the sector is exposed</h2></div><canvas class="band" data-g="band" aria-hidden="true"></canvas></div>
+
+<section class="plate" id="p02"><div class="wrap">
+  <header class="ph"><p class="k no">Plate<b>02</b></p><div>
+    <h2>Four exposures, all structurally high</h2>
+    <p class="lede">Banking holds transferable money, runs on shared infrastructure and answers to several authorities at once. That makes its inherent exposure high on every dimension below. What remains after a borrower's own controls is not something a sector report can tell you.</p></div></header>
+
+  <div class="cols c4">
+    <div class="dial"><p class="k">Fraud</p><h3>Money that moves on instruction</h3>
+      <div class="scale" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div><p class="rate">Inherent: high</p>
+      <p>Banks execute payments, lend against documents and delegate authority to staff and intermediaries. A bank can be the victim, the conduit or the party that must reimburse.</p>
+      <div class="fig"><b class="num">£1.17bn</b><p class="small">gross UK payment-fraud losses in 2024 across 3.31m cases. Value fell 2.7% since 2020 while cases rose 8.1%. <i class="ev doc">UK Finance</i></p></div>
+      <p><strong>Credit reading.</strong> Recurrent small losses, plus rare concentrated ones from insider, collateral or reporting fraud that payment statistics never show.</p></div>
+    <div class="dial"><p class="k">Cyber / ICT</p><h3>Records that must stay true</h3>
+      <div class="scale" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div><p class="rate">Inherent: high</p>
+      <p>Every service depends on continuously available systems and trustworthy balances. A disruption can stop payments or settlement with no data stolen at all. Observed maturity is uneven.</p>
+      <div class="fig"><b class="num">65%</b><p class="small">of 592 financial-services respondents reported ransomware in the prior year, against 59% across sectors. Broader than banks. <i class="ev sur">Sophos 2024</i></p></div>
+      <p><strong>Credit reading.</strong> Outage and data-integrity risk first, then a long tail of remediation, legal and regulatory cost.</p></div>
+    <div class="dial"><p class="k">Operational resilience / third parties</p><h3>Shared pipes, shared failures</h3>
+      <div class="scale" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div><p class="rate">Inherent: high</p>
+      <p>Core processors, cloud, messaging and clearing are common to many banks. One supplier incident can remove the same function from several institutions on the same day.</p>
+      <div class="fig"><b class="num">27%</b><p class="small">of incidents UK firms reported for 2025 came from a third party, and 37% of those were cyber-related. All financial firms, not banks alone. <i class="ev doc">FCA, July 2026</i></p></div>
+      <p><strong>Credit reading.</strong> Liquidity can tighten before any loss is booked: settlement queues, trapped collateral, replacement funding.</p></div>
+    <div class="dial"><p class="k">Governance / operating model</p><h3>Accountable, but not always in control</h3>
+      <div class="scale" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="rng"></i><i class="rng"></i><i></i></div><p class="rate">High for complex groups · variable for simple ones</p>
+      <p>A payment may cross a local bank, a group technology company, a processor and a correspondent. The entity answerable to the customer may not direct any of them.</p>
+      <div class="fig"><b class="num">&gt;10%</b><p class="small">of contracts covering critical functions were found non-compliant in ECB supervisory work. <i class="ev sup">ECB priorities 2025–27</i></p></div>
+      <p><strong>Credit reading.</strong> Slow decisions in a crisis, repeat findings, sustained remediation spend and possible limits on activity.</p></div>
+  </div>
+
+  <h3 class="sub">The financial baseline the exposure sits on</h3>
+  <div class="cols c4">
+    <div class="base"><p class="k">EU / EEA · Q2 2026</p><b class="num">16.1%</b><p class="small">CET1 ratio, with robust liquidity and high profitability. <i class="ev doc">EBA</i></p></div>
+    <div class="base"><p class="k">UK major banks · Q1 2026</p><b class="num">14.2%</b><p class="small">CET1 ratio, with a 142% liquidity coverage ratio. <i class="ev doc">Bank of England</i></p></div>
+    <div class="base"><p class="k">US · Q2 2026</p><b class="num">1.37%</b><p class="small">return on assets across 4,238 insured institutions, net income $90.1bn. <i class="ev doc">FDIC</i></p></div>
+    <div class="base"><p class="k">Reading</p><p style="margin-top:8px;font-size:.95rem">Aggregate strength is a starting point. It does not establish that a given counterparty can absorb an eight-week disruption. Recurring earnings, deposit stability, capital headroom and operational recoverability decide that.</p></div>
+  </div>
+  <p class="note small">Inherent exposure describes the sector's structure. Residual exposure depends on a borrower's tested controls, suppliers and financial buffers, and is left undetermined here. Banking is highly exposed, but the evidence does not support calling it the most exposed sector: healthcare reports higher breach costs, and energy and manufacturing carry physical-process risk that banking does not.</p>
+</div></section>
+
+<section class="plate" id="p03"><div class="wrap">
+  <header class="ph"><p class="k no">Plate<b>03</b></p><div>
+    <h2>Anatomy of a payment, and what it stands on</h2>
+    <p class="lede">Read across for the service a customer sees. Read down for the layers that service needs. A failure in any layer stops the row above it, and the third column says why a second site or a second contract often does not help.</p></div></header>
+
+  <div class="scroll">
+    <div class="chain">
+      <div><span>STEP 1</span>Customer authentication</div><div><span>STEP 2</span>Account and loan records</div><div><span>STEP 3</span>Fraud and sanctions checks</div><div><span>STEP 4</span>Payment processing</div><div><span>STEP 5</span>Clearing and settlement</div><div><span>STEP 6</span>Reconciliation</div>
+    </div>
+    <div class="strata">
+      <div><span class="k">Dependency layer</span><span class="k">How a cyber event stops the service</span><span class="k">Why the backup may not save you</span></div>
+      <div><b>Identity, privileged access, keys</b><span>Compromised or failed identity means legitimate users and applications cannot transact.</span><span>Recovery tools often log in through the same identity path that just failed.</span></div>
+      <div><b>Core ledger and databases</b><span>Ransomware or altered records leave balances unavailable or untrustworthy.</span><span>Restarting applications does not prove the data is correct. A core platform cannot be swapped during an outage.</span></div>
+      <div><b>Payment engines, card processors, screening</b><span>Processor compromise or unavailable screening queues and rejects payments; cut-offs are missed.</span><span>An alternate rail works only if contracted, integrated and tested, and has different limits and finality.</span></div>
+      <div><b>Messaging, RTGS, clearing houses, correspondents</b><span>An incident at a participant or shared infrastructure delays settlement and traps liquidity.</span><span>Final settlement infrastructure cannot be replaced on demand.</span></div>
+      <div><b>Cloud, hosting, virtualisation</b><span>Tenant or administrator compromise takes applications and recovery down together.</span><span>A second region may share software and identity. Multi-cloud does not make an application portable.</span></div>
+      <div><b>Managed services and remote support</b><span>Stolen supplier credentials reach several clients; isolating the supplier can itself stop service.</span><span>Replacement is limited by specialist knowledge and transition time.</span></div>
+      <div><b>Enterprise software and update channels</b><span>A malicious or defective update causes correlated outages.</span><span>A second site running the same software fails in the same way.</span></div>
+      <div><b>Telecoms, internet, DNS</b><span>DDoS or routing manipulation makes healthy applications unreachable.</span><span>Separate carrier contracts may share ducts, exchanges or upstream providers.</span></div>
+      <div><b>Power, cooling, buildings</b><span>Loss of power or cooling forces protective shutdown of hosting sites.</span><span>Generator endurance and fuel resupply set the real limit.</span></div>
+      <div><b>Cash logistics and ATM servicing</b><span>Disrupted dispatch or maintenance systems leave ATMs empty or offline.</span><span>Cash is not an unlimited substitute for digital payments and has its own supply chain.</span></div>
+    </div>
+  </div>
+  <p class="small" style="margin-top:10px">Shaded layers are needed to complete a transaction or to restore safely. The chain shown is the retail and commercial pattern; the dependency categories are documented for the sector, and no vendor relationship is assigned to any individual bank.</p>
+
+  <div class="cols c2" style="margin-top:40px">
+    <div>
+      <h3 class="sub" style="margin-top:0">Seven places a bank can stop</h3>
+      <ol class="spof">
+        <li><span><strong>Records and their recovery chain.</strong> If ledger, journals and backups sit inside one compromised administrative boundary, spare capacity cannot restore trustworthy balances.</span></li>
+        <li><span><strong>Shared identity and management tools.</strong> Production, backup administration, supplier access and crisis communications go dark together.</span></li>
+        <li><span><strong>A bundled core provider.</strong> One incident removes account servicing, digital channels, payments and support at once.</span></li>
+        <li><span><strong>A sole settlement intermediary.</strong> The bank runs, but cannot complete transactions in a currency or market.</span></li>
+        <li><span><strong>Common software at both sites.</strong> An update or exploit defeats geographic redundancy.</span></li>
+        <li><span><strong>A handful of specialists.</strong> Recovery waits on a few engineers, treasury authorisers or vendor staff.</span></li>
+        <li><span><strong>Backlog capacity.</strong> Manual fallbacks keep a minimum service but cannot clear queues before settlement, margin or payroll deadlines.</span></li>
+      </ol>
+    </div>
+    <div>
+      <h3 class="sub" style="margin-top:0">The bottleneck moves with the business model</h3>
+      <div class="scroll"><table>
+        <tr><th>Model</th><th>Where service delivery can stop</th></tr>
+        <tr><td>Retail and commercial</td><td>Core ledger and payment authorisation. Many channels, one back end.</td></tr>
+        <tr><td>Community, regional, mutual</td><td>An outsourced core that also carries digital banking and payments.</td></tr>
+        <tr><td>Universal</td><td>Group technology and identity that link otherwise diversified businesses.</td></tr>
+        <tr><td>Investment and prime brokerage</td><td>Clearing access, position accuracy, intraday collateral.</td></tr>
+        <tr><td>Custody and transaction</td><td>Settlement connectivity, subcustodians, deadline-bound corporate actions.</td></tr>
+        <tr><td>Digital-only</td><td>Identity, cloud and payment processors, with no branch workaround.</td></tr>
+        <tr><td>Banking-as-a-service</td><td>Middleware and customer-level records split across several parties.</td></tr>
+        <tr><td>Specialist lenders</td><td>Credit-data interfaces, servicing records, funding lines. Origination stops first.</td></tr>
+      </table></div>
+    </div>
+  </div>
+  <p class="note small"><i class="ev doc">Documented</i> The dependency is real even without an attack. On 18 July 2024 a Swift Y-Copy issue stopped CHAPS settlement for 245 minutes; hours were extended and every payment settled. The 2023 ransomware attack on ION forced derivatives firms into manual processing for weeks. The strongest continuity evidence is a tested completion of the business service with trustworthy data, not the existence of a second data centre.</p>
+</div></section>
+
+<!-- ===================== MOVEMENT II ===================== -->
+<div class="wrap move"><div class="move-title"><p class="k">Movement II · Plates 04–07</p><h2>What the evidence shows</h2></div><canvas class="band" data-g="band" aria-hidden="true"></canvas></div>
+
+<section class="plate" id="p04"><div class="wrap">
+  <header class="ph"><p class="k no">Plate<b>04</b></p><div>
+    <h2>Five threats, ranked by what they can stop</h2>
+    <p class="lede">The common thread is trusted access. A valid login, an administrator account, an authenticated payment message or a supplier connection carries the attacker past the perimeter. The order reflects operational severity, breadth and strength of evidence. It is not a probability ranking.</p></div></header>
+
+  <div class="threat"><b>1</b><div>
+    <h3>Privileged compromise leading to ransomware or untrustworthy data</h3>
+    <div class="sev"><i class="ev crit">Critical</i><span class="small">All banks, especially groups on shared infrastructure</span></div>
+    <div class="cols c2"><p><strong>Seen in.</strong> River Financial, June 2026: access around 16 June, detected 19 June, ransomware across part of the server estate, administrator accounts disabled, systems taken offline, data removed. How the attackers first got in was not disclosed.</p>
+    <p><strong>What it does to the business.</strong> Accounts and servicing unavailable, payments delayed, positions uncertain, long manual reconciliation. The bank may be unable to show that balances are correct.</p></div>
+    <p class="path">stolen credentials or manipulated account reset → administrator rights → directories, virtualisation, backups → data theft and encryption → isolation and reconciliation</p></div></div>
+
+  <div class="threat"><b>2</b><div>
+    <h3>Critical supplier compromise affecting many institutions at once</h3>
+    <div class="sev"><i class="ev crit">Critical for processing</i><i class="ev">High for data</i><span class="small">Regional banks, BaaS, custody, derivatives</span></div>
+    <div class="cols c2"><p><strong>Seen in.</strong> ION, January 2023: LockBit disabled a trade-processing service used by 16 of about 60 US futures commission merchants. Marquis, SitusAMC and DriveWealth, 2025–26: customer data taken from suppliers while the banks' own networks were untouched.</p>
+    <p><strong>What it does to the business.</strong> Clearing and settlement backlogs, or correlated notification and litigation exposure. Ending a supplier relationship does not end exposure: DriveWealth held records of former clients.</p></div>
+    <p class="path">supplier intrusion → hosted service unavailable, or retained data stolen → the same loss lands on every client</p></div></div>
+
+  <div class="threat"><b>3</b><div>
+    <h3>Identity and process deception that walks data out</h3>
+    <div class="sev"><i class="ev">High</i><span class="small">Digital banks, consumer lenders, wealth and private banking</span></div>
+    <div class="cols c2"><p><strong>Seen in.</strong> Revolut, disclosed 12 September 2026: an email impersonating a government agency induced staff to release identity documents and transaction records. No system was hacked. Capital One, 2019: a misconfigured firewall exposed stored data.</p>
+    <p><strong>What it does to the business.</strong> KYC, credit and wealth records exposed; customer-protection costs, litigation and follow-on scams. Core banking keeps running throughout, which is why it is easy to underrate.</p></div>
+    <p class="path">phishing, voice deception or a forged official request → valid access or voluntary disclosure → bulk extraction → extortion or targeted fraud</p></div></div>
+
+  <div class="threat"><b>4</b><div>
+    <h3>Payment manipulation, account takeover and ATM cash-out</h3>
+    <div class="sev"><i class="ev crit">High to critical</i><span class="small">Retail, commercial and transaction banks, ATM operators</span></div>
+    <div class="cols c2"><p><strong>Seen in.</strong> Bangladesh Bank, 2016: fraudulent instructions sent from the bank's own payment terminals. US ATM jackpotting: physical access plus Ploutus malware forcing machines to dispense cash.</p>
+    <p><strong>What it does to the business.</strong> Direct theft, recalls, suspended channels, customer disputes. A successful cash-out needs no bank-wide outage.</p></div>
+    <p class="path">compromised endpoint or customer → instruction that looks authorised → funds dispersed across borders before recall</p></div></div>
+
+  <div class="threat"><b>5</b><div>
+    <h3>DDoS and coordinated disruption of customer access</h3>
+    <div class="sev"><i class="ev">High</i><span class="small">Digital banks, payments, API-connected businesses</span></div>
+    <div class="cols c2"><p><strong>Seen in.</strong> Vendor telemetry ranks financial services as the most targeted industry for network-layer DDoS, with pro-Iran and pro-Russia hacktivists naming banks and payment APIs.</p>
+    <p><strong>What it does to the business.</strong> Login and payment failures, support overload, missed processing windows if prolonged. It becomes critical when it coincides with another failure.</p></div>
+    <p class="path">botnet traffic → network, API, DNS or authentication capacity exhausted → queues and degraded service</p></div></div>
+
+  <h3 class="sub">Four measurements, and what each one is not</h3>
+  <div class="cols c4">
+    <div class="stat"><b class="num">≈40,000</b><p>new phishing URLs aimed at US financial brands in H1 2026. Infrastructure, not victims. <i class="ev sur">Netcraft</i></p></div>
+    <div class="stat"><b class="num">700+</b><p>US ATM jackpotting incidents in 2025, with losses above $20m. One attack class, no per-bank rate. <i class="ev doc">FBI</i></p></div>
+    <div class="stat"><b class="num">+738%</b><p>median duration of network-layer DDoS on financial services since 2024. Longer attacks, not more outages. <i class="ev sur">Akamai</i></p></div>
+    <div class="stat"><b class="num">&lt;3 h</b><p>from target selection to privileged cloud access in some AI-assisted sequences. Cross-sector, human-directed. <i class="ev doc">Canadian Cyber Centre, Oct 2026</i></p></div>
+  </div>
+  <p class="note small">Direction of travel: attacks execute faster and reuse identity and supplier pathways, which raises the value of fast containment and independently recoverable operations. The evidence does not show that AI caused recent bank incidents, that ransomware always destroys backups, or that a worldwide banking attack rate can be stated.</p>
+</div></section>
+
+<section class="plate" id="p05"><div class="wrap">
+  <header class="ph"><p class="k no">Plate<b>05</b></p><div>
+    <h2>Geopolitics chooses the target and the purpose</h2>
+    <p class="lede">State-linked activity against banks comes in four forms: reading, disrupting, stealing and quietly waiting. A borrower's exposure follows its relationships, its staff and its shared infrastructure more than its nationality.</p></div></header>
+
+  <div class="scroll"><table class="geo" style="min-width:760px">
+    <tr><th>Driver</th><th class="m">Espionage</th><th class="m">Disruption</th><th class="m">Theft</th><th class="m">Pre-positioned access</th><th>What was observed</th></tr>
+    <tr><td>Russia and the war in Ukraine</td><td class="m"><i class="dot full"></i></td><td class="m"><i class="dot full"></i></td><td class="m"><i class="dot none"></i></td><td class="m"><i class="dot none"></i></td>
+      <td>Star Blizzard, attributed by the US to Russia's FSB, targeted more than 100 organisations in 2026, mainly in the US and UK, including financial institutions backing Ukraine. Lures included an M&amp;A discussion and a payment advice. Pro-Russian DDoS groups hit banks in supporting countries; their success counts are their own claims, and outages were generally resolved in hours.</td></tr>
+    <tr><td>Iran, Israel and the US</td><td class="m"><i class="dot half"></i></td><td class="m"><i class="dot full"></i></td><td class="m"><i class="dot none"></i></td><td class="m"><i class="dot none"></i></td>
+      <td>Backdoors at a US bank were reported in March 2026 and publicly linked to Iranian actors; researchers disagree on the attribution. In June 2025 Bank Sepah lost account access and card payments in an attack claimed by a pro-Israel group. In June 2026 four Iranian banks failed together through shared communications infrastructure, attacker not established.</td></tr>
+    <tr><td>North Korea</td><td class="m"><i class="dot none"></i></td><td class="m"><i class="dot half"></i></td><td class="m"><i class="dot half"></i></td><td class="m"><i class="dot none"></i></td>
+      <td>The regime-backed group behind the Bangladesh Bank heist has a record of theft and destructive attacks on banks, last recorded in 2018. Recent activity targets fintech and crypto staff through compromised messaging accounts and fake meetings, a technique that applies equally to bank employees.</td></tr>
+    <tr><td>China and strategic competition</td><td class="m"><i class="dot half"></i></td><td class="m"><i class="dot none"></i></td><td class="m"><i class="dot none"></i></td><td class="m"><i class="dot half"></i></td>
+      <td>US agencies assess that Volt Typhoon pre-positioned inside critical infrastructure for possible disruption in a crisis. Salt Typhoon compromised telecom carriers. Neither is a bank intrusion; both sit upstream of every bank that uses those networks.</td></tr>
+  </table></div>
+  <div class="legend"><span><i class="dot full"></i>Observed against banks or financial institutions</span><span><i class="dot half"></i>Historical, adjacent to banking, or attribution qualified</span><span><i class="dot none"></i>Not established in the evidence</span></div>
+
+  <div class="cols c2" style="margin-top:40px">
+    <div>
+      <h3 class="sub" style="margin-top:0">Who is more exposed, and through what</h3>
+      <div class="scroll"><table>
+        <tr><th>Institution</th><th>Reason</th></tr>
+        <tr><td>Banks financing or publicly supporting Ukraine</td><td>Documented espionage and DDoS targeting far from the conflict zone.</td></tr>
+        <tr><td>Correspondent and transaction banks</td><td>Cross-border payment and sanctions information has intelligence value.</td></tr>
+        <tr><td>Custody, markets and investment banks</td><td>Positions and strategic deals are worth reading; processing is deadline-bound.</td></tr>
+        <tr><td>Gulf hubs, Iranian and Israeli ecosystems</td><td>Retaliation incentives and reliance on regional infrastructure.</td></tr>
+        <tr><td>Digital-only banks</td><td>Customer access depends entirely on externally reachable services.</td></tr>
+        <tr><td>Small banks and BaaS</td><td>A shared provider with few substitutes amplifies any supplier incident.</td></tr>
+      </table></div>
+    </div>
+    <div>
+      <h3 class="sub" style="margin-top:0">Signals that would change the assessment</h3>
+      <ul class="plain">
+        <li>A campaign that names banks or specific financing relationships, confirmed by telemetry or a victim rather than by the actor's own posts.</li>
+        <li>Phishing themed on financing, sanctions, conferences or payment advice reaching the borrower's staff.</li>
+        <li>Persistent access found inside a critical supplier or management platform.</li>
+        <li>DDoS that persists across channels or defeats failover.</li>
+        <li>Technical confirmation of destructive commands, or interference with backups and identity systems.</li>
+        <li>Settlement queues, failed reconciliations or counterparties restricting limits.</li>
+      </ul>
+      <p class="small" style="margin-top:14px">The most material escalation would be confirmed state-linked access to a shared processor, payment infrastructure or recovery provider. Independently tested containment and recovery would lower the assessed severity.</p>
+    </div>
+  </div>
+  <p class="note small"><strong>Credit reading.</strong> Banks in different countries can share one identity platform, processor or recovery provider, so concentration can outweigh geographic diversification. Conflict can also remove recovery options that were tested in peacetime: connectivity, supplier staff, travel. Attribution matters to sanctions, insurance and legal treatment and is usually unknown while the crisis is live, so expected insurance recovery should not be counted as available cash.</p>
+</div></section>
+
+<section class="plate" id="p06"><div class="wrap">
+  <header class="ph"><p class="k no">Plate<b>06</b></p><div>
+    <h2>The record: fourteen incidents, three mechanisms</h2>
+    <p class="lede">Consequential bank incidents fall into three kinds, and each reaches credit by a different road. Stolen funds, remediation spend, settlements, penalties and temporary settlement exposures are different things and should never be added into one loss figure.</p></div></header>
+
+  <div class="legend" style="margin:0 0 22px"><span><i class="sw pay"></i><strong>Payment integrity.</strong> Legitimate infrastructure executes fraudulent instructions</span><span><i class="sw conf"></i><strong>Confidentiality.</strong> Data stolen, service continues</span><span><i class="sw avail"></i><strong>Availability and supply chain.</strong> Processing impaired</span></div>
+
+  <div class="cols c2">
+    <div>
+      <p class="k" style="margin-bottom:14px">Landmarks</p>
+      <ol class="tl">
+        <li><time>2014</time><i class="conf"></i><span><b>JPMorgan Chase.</b> Contact data for 76m households and 7m small businesses taken. No account numbers or passwords, and no related fraud reported at the time.</span></li>
+        <li><time>Feb 2016</time><i class="pay"></i><span><b>Bangladesh Bank.</b> $81m transferred to Philippine accounts through the bank's own SWIFT terminals; a further $20m stopped. SWIFT's central network was not breached.</span></li>
+        <li><time>Mar 2019</time><i class="conf"></i><span><b>Capital One.</b> About 100m US and 6m Canadian individuals affected through a misconfigured firewall. $80m regulatory penalty in 2020, $190m customer settlement later.</span></li>
+        <li><time>Jan 2023</time><i class="avail"></i><span><b>ION Cleared Derivatives.</b> Ransomware at a supplier. Trade processing, margin and reporting ran manually; most services back by 19 February. No defaults.</span></li>
+        <li><time>Nov 2023</time><i class="avail"></i><span><b>ICBC Financial Services.</b> Ransomware disrupted US Treasury clearing and left a temporary $9bn obligation to its settlement bank. A funding need, not a loss.</span></li>
+      </ol>
+    </div>
+    <div>
+      <p class="k" style="margin-bottom:14px">Twelve months to 27 October 2026</p>
+      <ol class="tl">
+        <li><time>2025</time><i class="pay"></i><span><b>US ATM jackpotting.</b> 700+ incidents and $20m+ in losses reported by the FBI for the year; sanctions and prosecutions followed in autumn 2026.</span></li>
+        <li><time>Aug 2025</time><i class="conf"></i><span><b>Marquis.</b> Data-services supplier to banks and credit unions hit by ransomware through a firewall. 672,075 people in one state filing alone.</span></li>
+        <li><time>Nov 2025</time><i class="conf"></i><span><b>SitusAMC.</b> Mortgage-services supplier; personal data acquired over a week. Client banks' networks not shown to be breached.</span></li>
+        <li><time>Mar 2026</time><i class="conf"></i><span><b>Standard Bank.</b> Administrative and document systems accessed. Core and transaction systems stayed available.</span></li>
+        <li><time>Jun 2026</time><i class="avail"></i><span><b>River Financial.</b> Ransomware and data removal at a US regional bank. Financial impact still unresolved in its July filing.</span></li>
+        <li><time>Jun 2026</time><i class="avail"></i><span><b>Melli, Tejarat, Saderat, EDBI.</b> Four Iranian banks disrupted through one shared communications layer.</span></li>
+        <li><time>Sep 2026</time><i class="conf"></i><span><b>Revolut.</b> Customer data released to someone impersonating a government agency.</span></li>
+        <li><time>Sep 2026</time><i class="conf"></i><span><b>DriveWealth.</b> Brokerage supplier breached by social engineering; records of former clients' customers exposed.</span></li>
+        <li><time>Oct 2026</time><i class="conf"></i><span><b>South Korean cluster.</b> The regulator confirmed incidents at 16 financial firms and about 100,000 exposed records, including Shinhan, KB Kookmin, Hana and BNK Busan. One bank's count grew from 119 to 2,210 people within a month.</span></li>
+      </ol>
+    </div>
+  </div>
+
+  <h3 class="sub">Three cases, three lessons for the sector</h3>
+  <div class="cols c3">
+    <div class="lesson frame"><p class="k">Bangladesh Bank · payment integrity</p><h4>An authenticated message is not a legitimate instruction</h4><p>Attackers reached the terminals that speak to SWIFT and sent payment orders that looked genuine in every technical respect. Protecting the endpoint was necessary and not sufficient.</p><p class="q">What independent check sits between a valid login and a large payment?</p></div>
+    <div class="lesson frame"><p class="k">Capital One · confidentiality</p><h4>Using a cloud provider does not transfer the risk</h4><p>Configuration and permissions stayed the bank's responsibility. Service never stopped, yet the consequences ran for years: a penalty for weak cloud-risk assessment and slow correction, then a settlement.</p><p class="q">Who owns configuration, and how fast are known gaps closed?</p></div>
+    <div class="lesson frame"><p class="k">ION · availability</p><h4>A healthy bank network is not enough</h4><p>Client firms were not breached, but could not process trades. Manual work and clearing-house help met every margin call. The workaround existed and still could not keep normal throughput or timely reporting.</p><p class="q">Can the fallback carry real volume, and for how long?</p></div>
+  </div>
+  <p class="note small">Entries are selected for significance and documentation, not sampled, so they cannot be turned into an incident rate. Unverified ransomware-gang claims against two further banks in 2026 are left out, as are non-cyber outages such as the March 2026 Lloyds data-display defect and the October 2026 cloud disruption. Initial access is unknown for most recent cases, and later notices about one incident are not counted as new attacks.</p>
+</div></section>
+
+<section class="plate" id="p07"><div class="wrap">
+  <header class="ph"><p class="k no">Plate<b>07</b></p><div>
+    <h2>The capabilities that decide the outcome</h2>
+    <p class="lede">The benchmark is whether critical services can be delivered through a disruption, not which security products are owned. Seven capabilities protect the ability to transact and recover. Four more limit how far an incident spreads.</p></div></header>
+
+  <div class="scroll"><table style="min-width:820px">
+    <tr><th>Capability</th><th>Threat it answers</th><th>If it fails</th><th>Evidence it is needed</th></tr>
+    <tr><td>Critical-service ownership and mapping</td><td>Hidden dependencies, wrong recovery order</td><td>Systems come back but the service is unusable or misses a settlement deadline.</td><td><i class="ev sup">ECB 2024</i> 109 banks tested; gaps in recovery objectives and third-party dependencies.</td></tr>
+    <tr><td>Identity and privileged access</td><td>Stolen credentials, reset abuse, escalation</td><td>Account takeover, unauthorised instructions, production and recovery both compromised.</td><td><i class="ev doc">River 2026</i> administrator accounts involved. Official advisories document MFA being bypassed, not absent.</td></tr>
+    <tr><td>Asset visibility, configuration, patching</td><td>Exploited or misconfigured internet-facing systems</td><td>Unmanaged entry points and unknown recovery dependencies.</td><td><i class="ev doc">Capital One</i> misconfigured firewall; $80m penalty for risk-assessment failings.</td></tr>
+    <tr><td>Transaction and data integrity</td><td>Payment manipulation, corrupted records</td><td>Fraud, wrong balances, no certainty over which transactions completed.</td><td><i class="ev doc">Bangladesh Bank</i> $81m moved on authentic-looking instructions.</td></tr>
+    <tr><td>Backups and independent recovery</td><td>Encryption, destruction, corruption</td><td>Copies exist but are unusable, compromised or reproduce the corruption.</td><td><i class="ev sup">ECB 2024</i> scenario assumed core databases lost; improvement needs found.</td></tr>
+    <tr><td>End-to-end continuity testing</td><td>Any prolonged outage</td><td>Failover works technically; essential transactions still cannot complete on time.</td><td><i class="ev doc">ION 2023</i> manual processing held, at reduced throughput.</td></tr>
+    <tr><td>Critical third-party resilience</td><td>Supplier compromise or outage</td><td>One incident hits several functions; alternatives exist only on paper.</td><td><i class="ev sup">ECB</i> over 10% of critical-function contracts non-compliant. <i class="ev doc">FCA</i> 27% of incidents third-party.</td></tr>
+    <tr><td style="font-weight:400">Segmentation and containment</td><td>Lateral movement</td><td>Containing a local problem means shutting down healthy services.</td><td><i class="ev doc">River 2026</i> systems taken offline to contain.</td></tr>
+    <tr><td style="font-weight:400">Monitoring and detection</td><td>Valid-account abuse, bulk extraction</td><td>Theft continues unnoticed; too little evidence for a safe restart.</td><td><i class="ev sur">IBM 2024</i> 168 days mean to identify a breach in finance.</td></tr>
+    <tr><td style="font-weight:400">Incident response and crisis coordination</td><td>Slow or contradictory decisions</td><td>Late containment, missed notifications, avoidable disruption.</td><td><i class="ev doc">ION 2023</i> coordinated response avoided defaults.</td></tr>
+    <tr><td style="font-weight:400">Facilities and physical resilience</td><td>Power, cooling, ATM and site compromise</td><td>Loss of premises or cash access compounds the cyber event.</td><td><i class="ev doc">FBI 2026</i> ATM attacks. No bank facilities compromise established.</td></tr>
+  </table></div>
+
+  <h3 class="sub">Six pairs that are easy to mistake for each other</h3>
+  <div class="pairs">
+    <div><b>MFA is not identity protection</b>Enrolment, reset, help-desk verification, service accounts and emergency access are where attackers go.</div>
+    <div><b>A backup is not a recovery</b>Holding copies says nothing about clean, complete and timely restoration with correct balances.</div>
+    <div><b>A certificate is not assurance</b>Scope and findings matter. ISO 27001 or SOC 2 may cover a fraction of the critical services.</div>
+    <div><b>A plan is not a test</b>Recovery plans are more complete than recovery evidence across the supervised population.</div>
+    <div><b>A contract is not an exit</b>Supplier assurance often stops at paperwork that proves neither substitution nor joint recovery.</div>
+    <div><b>Sector exposure is not a borrower weakness</b>The table describes what banking needs. Whether a given bank has it is established only by its own evidence.</div>
+  </div>
+  <p class="note small">Proportionality applies. A small bank with a well-governed outsourced core can be resilient; a large group with several data centres can still be concentrated. Multi-cloud, micro-segmentation or an in-house security operations centre are justified by risk and outcome, not presumed necessary for every institution. There is no defensible single worldwide banking maturity score.</p>
+</div></section>
+
+<!-- ===================== MOVEMENT III ===================== -->
+<div class="wrap move"><div class="move-title"><p class="k">Movement III · Plates 08–10</p><h2>What is expected, and what it costs</h2></div><canvas class="band" data-g="band" aria-hidden="true"></canvas></div>
+
+<section class="plate" id="p08"><div class="wrap">
+  <header class="ph"><p class="k no">Plate<b>08</b></p><div>
+    <h2>Three regimes, one direction</h2>
+    <p class="lede">The EU has one harmonised law, the UK regulates outcomes for important services, and the US layers rules by charter and activity. All three now expect a bank to prove it can keep critical services running and to tell its supervisor quickly when it cannot.</p></div></header>
+
+  <div class="cols c3">
+    <div class="juris e"><p class="k">European Union</p><h3>One binding framework</h3>
+      <ul><li><strong>DORA</strong>, in force since 17 January 2025: ICT risk, incident reporting, resilience testing, third-party risk and a register of dependencies.</li>
+      <li>Advanced threat-led testing applies to selected institutions only.</li>
+      <li>19 technology providers designated as critical and overseen directly. Designation certifies nothing about a bank's own arrangement.</li>
+      <li>GDPR runs in parallel. A DORA report does not discharge it.</li>
+      <li>Third-country branches should not assume they fall outside DORA.</li></ul>
+      <p class="small" style="margin-top:10px">ECB for significant banks; national authorities otherwise; EBA sets standards.</p></div>
+    <div class="juris u"><p class="k">United Kingdom</p><h3>Outcomes for important services</h3>
+      <ul><li><strong>Operational resilience rules</strong>: identify important business services, set impact tolerances, map dependencies, test severe but plausible scenarios. Firms have had to stay within tolerance since 31 March 2025.</li>
+      <li>Outsourcing rules cover materiality, audit rights, concentration and exit. Management stays accountable.</li>
+      <li>Designated critical third parties are overseen jointly by the Bank, PRA and FCA.</li>
+      <li>A unified incident-reporting framework starts 18 March 2027. Existing duties apply until then.</li></ul>
+      <p class="small" style="margin-top:10px">PRA for prudential soundness, FCA for conduct, ICO for data.</p></div>
+    <div class="juris s"><p class="k">United States</p><h3>Layered by charter and activity</h3>
+      <ul><li><strong>GLBA-derived security standards</strong> require a risk-based programme with testing and supplier oversight.</li>
+      <li>The federal notification rule, SEC disclosure for listed groups, NYDFS Part 500 and state breach laws can all apply to one incident.</li>
+      <li>FFIEC handbooks, NIST CSF and the OCC work programme inform examiners. They are guidance, not statute.</li>
+      <li>CIRCIA reporting was not yet effective at the cutoff; third-party guidance changes are proposals.</li></ul>
+      <p class="small" style="margin-top:10px">OCC, Federal Reserve, FDIC or NCUA by charter, plus state and securities regulators.</p></div>
+  </div>
+
+  <h3 class="sub">Reporting clocks, and what starts each one</h3>
+  <div class="scroll">
+    <div class="axis" aria-hidden="true"><div></div><div><span style="left:0">1 h</span><span style="left:33.3%">10 h</span><span style="left:66.7%">100 h</span><span style="left:100%">1,000 h</span></div><div></div></div>
+    <div class="clock"><span><b>EU · DORA initial notice</b></span><div class="track"><i class="bar eu" style="width:20.1%"></i></div><span><span class="v">4 hours</span><br><span class="small">after classifying the incident as major, and within 24 h of awareness</span></span></div>
+    <div class="clock"><span><b>US · federal banking agencies</b></span><div class="track"><i class="bar us" style="width:51.9%"></i></div><span><span class="v">36 hours</span><br><span class="small">after determining a notification incident occurred</span></span></div>
+    <div class="clock"><span><b>EU · DORA intermediate report</b></span><div class="track"><i class="bar eu" style="width:61.9%"></i></div><span><span class="v">72 hours</span><br><span class="small">after the initial notice</span></span></div>
+    <div class="clock"><span><b>EU and UK · GDPR</b></span><div class="track"><i class="bar eu" style="width:61.9%"></i></div><span><span class="v">72 hours</span><br><span class="small">after awareness, where feasible and above the risk threshold</span></span></div>
+    <div class="clock"><span><b>US · NYDFS Part 500</b></span><div class="track"><i class="bar us" style="width:61.9%"></i></div><span><span class="v">72 hours</span><br><span class="small">after determination</span></span></div>
+    <div class="clock"><span><b>US · NCUA, credit unions</b></span><div class="track"><i class="bar us" style="width:61.9%"></i></div><span><span class="v">72 hours</span><br><span class="small">after reasonable belief of a reportable incident</span></span></div>
+    <div class="clock"><span><b>US · SEC Form 8-K</b></span><div class="track"><i class="bar us" style="width:66.1%"></i></div><span><span class="v">4 business days</span><br><span class="small">after deciding the incident is material, not after discovery</span></span></div>
+    <div class="clock"><span><b>US · FTC Safeguards, nonbanks</b></span><div class="track"><i class="bar us" style="width:95.2%"></i></div><span><span class="v">30 days</span><br><span class="small">after discovery, 500 or more consumers</span></span></div>
+    <div class="clock"><span><b>EU · DORA final report</b></span><div class="track"><i class="bar eu" style="width:95.4%"></i></div><span><span class="v">1 month</span><br><span class="small">after the intermediate report</span></span></div>
+    <div class="clock"><span><b>UK · PRA and FCA</b></span><div class="track"></div><span><span class="v">Prompt</span><br><span class="small">no single deadline today; defined thresholds from 18 March 2027</span></span></div>
+  </div>
+  <p class="small" style="margin-top:10px">Bars are on a logarithmic scale; four business days is drawn at 96 hours. The trigger differs in almost every row: awareness, determination, classification, materiality or reasonable belief. Several timings rest on secondary legal reporting and should be confirmed against the governing text before being used as a filing calendar.</p>
+
+  <h3 class="sub">How a shortcoming becomes a cost</h3>
+  <div class="scroll"><table>
+    <tr><th>Requirement</th><th>Road to the credit file</th></tr>
+    <tr><td>Service continuity and tested recovery</td><td>Restoration spend, lost fees, customer harm, settlement and liquidity pressure.</td></tr>
+    <tr><td>Supplier oversight and exit</td><td>Replacement and migration cost; limits on outsourcing strategy.</td></tr>
+    <tr><td>Incident classification and reporting</td><td>Parallel investigations and disclosure exposure when the process fails.</td></tr>
+    <tr><td>Privacy and data protection</td><td>Notification, customer protection and litigation, with or without downtime.</td></tr>
+    <tr><td>Governance and remediation</td><td>Sustained expense, management time, possible restrictions on activity or growth.</td></tr>
+  </table></div>
+  <p class="note small">Fines are not automatic and an incident does not by itself prove a breach of rules. The larger exposures are usually ordered remediation, restrictions on activity, supplier replacement and customer redress. Enforcement on record: Capital One, $80m from the OCC in 2020; TSB, £48.65m in fines plus £32.7m redress after its 2018 migration failure. No DORA bank penalty had been verified at the cutoff. NIST CSF, Basel principles, ISO standards and the CRI Profile are good practice, not law; SWIFT and card-scheme requirements bind participants within their scope only.</p>
+</div></section>
+
+<section class="plate" id="p09"><div class="wrap">
+  <header class="ph"><p class="k no">Plate<b>09</b></p><div>
+    <h2>What incidents have cost</h2>
+    <p class="lede">A typical studied breach in financial services costs between five and six million dollars, a figure that has barely moved in five years. The cases that matter to credit sit far above that average, and the largest numbers are often funding needs or legal settlements, not stolen money.</p></div></header>
+
+  <div class="cols c2">
+    <div>
+      <p class="k">Mean cost per studied breach · financial industry · US$m <i class="ev sur">IBM / Ponemon</i></p>
+      <div class="colchart" role="img" aria-label="Mean breach cost in the financial industry: 5.72 million dollars in 2021, 5.97 in 2022, 5.90 in 2023, 6.08 in 2024 and 5.56 in 2025">
+        <div style="height:81.7%"><span>5.72</span></div><div style="height:85.3%"><span>5.97</span></div><div style="height:84.3%"><span>5.90</span></div><div style="height:86.9%"><span>6.08</span></div><div class="hl" style="height:79.4%"><span>5.56</span></div>
+      </div>
+      <div class="colx"><span>2021</span><span>2022</span><span>2023</span><span>2024</span><span>2025</span></div>
+      <p class="small" style="margin-top:10px">Up 6.3% to 2024, then down 8.6%. Covers banks, insurers and investment firms; breaches of 2,960 to 113,620 records; includes estimated lost business. A mean, not a median, and not an annual expected loss. Secondary reports of a 2026 figure of $6.29m have not been reconciled to the primary table.</p>
+    </div>
+    <div>
+      <p class="k" style="margin-bottom:12px">Same study, 2025, by industry · US$m</p>
+      <div class="hbar"><span>Healthcare</span><div class="t"><i style="width:100%"></i></div><span class="v">7.42</span></div>
+      <div class="hbar hl"><span>Financial</span><div class="t"><i style="width:74.9%"></i></div><span class="v">5.56</span></div>
+      <div class="hbar"><span>Industrial</span><div class="t"><i style="width:67.4%"></i></div><span class="v">5.00</span></div>
+      <div class="hbar"><span>Energy</span><div class="t"><i style="width:65.1%"></i></div><span class="v">4.83</span></div>
+      <div class="hbar"><span>Technology</span><div class="t"><i style="width:64.6%"></i></div><span class="v">4.79</span></div>
+      <div class="hbar"><span>Professional services</span><div class="t"><i style="width:61.5%"></i></div><span class="v">4.56</span></div>
+      <div class="hbar"><span>Retail</span><div class="t"><i style="width:47.7%"></i></div><span class="v">3.54</span></div>
+      <div class="cols c2" style="margin-top:22px;gap:18px">
+        <div class="stat"><b class="num">219 days</b><p>168 to identify plus 51 to contain a breach in finance, 2024. Hidden exposure, not downtime. <i class="ev sur">IBM</i></p></div>
+        <div class="stat"><b class="num">$2m</b><p>median ransom paid by financial-services payers in the 2024 study, against $109,000 a year earlier. Payers only. <i class="ev sur">Sophos</i></p></div>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="sub">The ledger of documented consequences</h3>
+  <div class="scroll"><table class="ledger" style="min-width:720px">
+    <tr><th>Case</th><th>What kind of money</th><th class="r">Amount</th><th>Status</th></tr>
+    <tr><td>ICBC Financial Services, 2023</td><td>Temporary settlement obligation to its clearing bank</td><td class="r">$9bn</td><td><i class="ev doc">Reported</i> a funding need, not an expense or theft</td></tr>
+    <tr><td>Wells Fargo sales practices, 2002–16</td><td>Fines and legal settlements for internal conduct fraud</td><td class="r">≈$3bn</td><td><i class="ev doc">Reported</i> not a cyber event</td></tr>
+    <tr><td>Capital One, 2019</td><td>Customer class settlement</td><td class="r">$190m</td><td><i class="ev doc">Reported</i></td></tr>
+    <tr><td>Bangladesh Bank, 2016</td><td>Funds transferred out</td><td class="r">$81m</td><td><i class="ev doc">Reported</i> net loss after recoveries not established</td></tr>
+    <tr><td>Capital One, 2019</td><td>Regulatory penalty</td><td class="r">$80m</td><td><i class="ev doc">Reported</i></td></tr>
+    <tr><td>TSB migration, 2018</td><td>Regulatory fines, and separately customer redress</td><td class="r">£48.65m + £32.7m</td><td><i class="ev doc">Reported</i> via secondary retrospectives; not a cyber event</td></tr>
+    <tr><td>loanDepot, 2024</td><td>Ransomware-related costs, about $25m of it litigation</td><td class="r">≈$27m</td><td><i class="ev doc">Reported</i> nonbank lender; lost originations not reconciled</td></tr>
+    <tr><td>US ATM jackpotting, 2025</td><td>Cash dispensed across 700+ incidents</td><td class="r">$20m+</td><td><i class="ev doc">Reported</i></td></tr>
+    <tr><td>ION, 2023 · River Financial, 2026</td><td>Aggregate loss</td><td class="r">Unknown</td><td>Not disclosed. Unknown is not zero.</td></tr>
+  </table></div>
+
+  <h3 class="sub">Five clocks that are often confused</h3>
+  <div class="pairs">
+    <div><b>Identification</b>Compromise to discovery. Length of hidden exposure.</div>
+    <div><b>Containment</b>Discovery to stopping it. Emergency response cost; services may be restricted.</div>
+    <div><b>Service interruption</b>Loss to restoration of a named service. Fees, customer harm, settlement.</div>
+    <div><b>Operational recovery</b>Restoration plus reconciliation and backlog clearance. Overtime, errors, delayed cash.</div>
+    <div><b>Full business recovery</b>Legal, regulatory and customer resolution. The long tail.</div>
+    <div><b>In the record</b>ION: about three weeks to restore most services. Capital One: more than three years from breach to settlement.</div>
+  </div>
+  <p class="note small">No defensible banking-only worldwide average exists for incident cost, outage length, recovery spend or revenue lost. Benchmarks should not be scaled by record counts, assets or outage weeks to estimate a borrower's loss. Across all industries in the 2025 study, 86% of breached organisations reported operational disruption and 76% of those that had fully recovered took more than 100 days; these are not banking averages.</p>
+</div></section>
+
+<section class="plate" id="p10"><div class="wrap">
+  <header class="ph"><p class="k no">Plate<b>10</b></p><div>
+    <h2>From cyber event to credit event</h2>
+    <p class="lede">A disruption reaches debt service through four channels. Liquidity moves first and fastest, and it can exceed the accounting loss many times over. The scenario below is a worked sensitivity for a hypothetical bank, not a forecast for any borrower.</p></div></header>
+
+  <div class="scroll"><div class="flow">
+    <div><p class="k">Trigger</p><b>Service interrupted</b>Payments, settlement, origination or customer access impaired or untrusted.</div>
+    <div><p class="k">Days</p><b>Liquidity</b>Deposit withdrawals, settlement obligations, margin calls, replacement wholesale funding.</div>
+    <div><p class="k">Weeks</p><b>Revenue and cost</b>Lost fees and originations, waived charges, forensics, overtime, customer support, rebuilding.</div>
+    <div><p class="k">Quarters</p><b>Capital</b>Losses reduce retained earnings; settlements, penalties and supervisory add-ons follow.</div>
+    <div><p class="k">Credit outcome</p><b>Debt service</b>Lower earnings, costlier funding, cash trapped in the operating bank. Ratings and covenants only if damage persists.</div>
+  </div></div>
+
+  <h3 class="sub">One, four and eight weeks of disruption <i class="ev ill" style="vertical-align:middle;margin-left:.4em">Illustrative</i></h3>
+  <div class="cols c2" style="align-items:start">
+    <div>
+      <div class="stress" role="img" aria-label="Illustrative pre-tax profit reduction: 6.59 million dollars after one week, 24.18 million after four weeks and 52.56 million after eight weeks">
+        <div class="lab"><b>1 week</b><span class="k">7 days</span></div>
+        <div class="row"><div class="stack" style="width:9.3%"><i class="s-fee" style="width:21.2%"></i><i class="s-exp" style="width:75.9%"></i><i class="s-fund" style="width:2.9%"></i></div><span class="tot">$6.59m<small>3.3% of annual pre-tax profit</small></span></div>
+        <div class="lab"><b>4 weeks</b><span class="k">28 days</span></div>
+        <div class="row"><div class="stack" style="width:34%"><i class="s-fee" style="width:34.7%"></i><i class="s-exp" style="width:62.1%"></i><i class="s-fund" style="width:3.2%"></i></div><span class="tot">$24.18m<small>12.1%</small></span></div>
+        <div class="lab"><b>8 weeks</b><span class="k">56 days</span></div>
+        <div class="row"><div class="stack" style="width:74%"><i class="s-fee" style="width:40%"></i><i class="s-exp" style="width:57%"></i><i class="s-fund" style="width:3%"></i></div><span class="tot">$52.56m<small>26.3%</small></span></div>
+      </div>
+      <div class="legend"><span><i class="sw s-fee"></i>Lost fees: $1.4m · $8.4m · $21.0m</span><span><i class="sw s-exp"></i>Response and remediation: $5m · $15m · $30m</span><span><i class="sw s-fund"></i>Extra funding cost: $0.19m · $0.78m · $1.56m</span></div>
+      <p class="small" style="margin-top:14px">Lost fees = days × $1m × 50% unavailable × share permanently lost. Funding cost = $500m × 2% × days ÷ 360. The $500m of replacement funding is a cash need, not a loss.</p>
+    </div>
+    <div>
+      <p class="k" style="margin-bottom:8px">Assumptions</p>
+      <div class="scroll"><table>
+        <tr><td>Hypothetical bank</td><td>$1bn operating income, $365m of it fees; $200m annual pre-tax profit</td></tr>
+        <tr><td>Affected service</td><td>$1m of fee income a day; fallback preserves half</td></tr>
+        <tr><td>Fees lost for good</td><td>40%, 60%, 75% of unprocessed activity as duration grows</td></tr>
+        <tr><td>Interest income</td><td>Continues to accrue on existing loans</td></tr>
+        <tr><td>Left out</td><td>Ransom, fraud loss, fines, insurance, tax, long-tail litigation, customer attrition</td></tr>
+      </table></div>
+    </div>
+  </div>
+
+  <h3 class="sub">Replace the generic inputs with the borrower's model</h3>
+  <div class="pairs">
+    <div><b>Custody and transaction banks</b>Failed settlement throughput, intraday liquidity, overdrafts and penalty exposure.</div>
+    <div><b>Retail and digital banks</b>Deposit behaviour, card usage, fee waivers, support capacity. Branches help only if the back end works.</div>
+    <div><b>Investment banks</b>Restricted trading, hedge execution, collateral mobility and counterparty limits.</div>
+    <div><b>Mortgage and specialist lenders</b>Lost against delayed originations, loan-sale timing, warehouse interest, covenant headroom.</div>
+    <div><b>Banking-as-a-service</b>Access to customer-level records and funds, tested separately from the app.</div>
+    <div><b>Offsets to verify</b>Alternative rails, manual capacity, clean data, drawable liquidity, enforceable group support, insurance net of sublimits and waiting periods.</div>
+  </div>
+  <p class="note small">For deposit-taking banks, read the effect through net interest income, pre-provision profit, cost-to-income, liquidity and regulatory capital. EBITDA and net debt measures apply at holding companies, nonbank lenders and suppliers. No cyber-attributable covenant breach, debt-service default or rating downgrade is established for the cases in this document. That is a limit of the evidence, not assurance that it cannot happen, and nothing here is a conclusion about any individual borrower.</p>
+</div></section>
+
+<!-- ===================== MOVEMENT IV ===================== -->
+<div class="wrap move"><div class="move-title"><p class="k">Movement IV · Plates 11–12</p><h2>How to use it with a client</h2></div><canvas class="band" data-g="band" aria-hidden="true"></canvas></div>
+
+<section class="plate" id="p11"><div class="wrap">
+  <header class="ph"><p class="k no">Plate<b>11</b></p><div>
+    <h2>Reading the client questionnaire</h2>
+    <p class="lede">The questionnaire asks whether things exist. In banking the credit question is whether they work under stress. For each of its five themes, this plate sets out why a weak answer matters in this sector, where it has gone wrong before, and what makes it more or less significant for a particular borrower.</p></div></header>
+
+  <p class="k" style="margin-bottom:10px">Before reading any answer, establish which of five things it means</p>
+  <div class="states"><span>Not in place</span><span>Outsourced</span><span>Not applicable</span><span>Not known</span><span>In place, not independently tested</span></div>
+  <p class="small" style="margin:12px 0 30px;max-width:78ch">All answers are self-reported. A "yes" is a statement to explore, not a verified control. A "no" is not a finding of non-compliance.</p>
+
+  <div class="map"><div><p class="k">Theme 1</p><h3>Security leadership and knowing what you own</h3><p class="covers">Covers the security lead and team, their reporting line, the written programme, the asset inventory and asset classification.</p></div>
+    <dl>
+      <div><dt class="k">Why it matters in banking</dt><dd>Services cross legal entities, group technology companies and suppliers. Without a named owner and a current map of what supports each service, recovery priorities are guessed during the crisis.</dd></div>
+      <div><dt class="k">Where it went wrong</dt><dd>Capital One was penalised $80m for cloud-risk assessment failings and slow correction, a governance finding. New York's regulator in 2026 still cited incomplete asset inventories as a recurring weakness.</dd></div>
+      <div><dt class="k">Road to credit</dt><dd>Longer outages, ordered remediation, sustained expense and possible restrictions on growth.</dd></div>
+      <div><dt class="k">What changes its weight</dt><dd>Heavier in cross-border groups, after acquisitions and where one supplier supports several functions. Lighter where a small bank has a well-governed outsourced arrangement with clear decision rights.</dd></div>
+    </dl></div>
+
+  <div class="map"><div><p class="k">Theme 2</p><h3>Technical preparedness</h3><p class="covers">Covers patching and malware protection, multi-factor authentication, vulnerability scanning, the incident response plan, and the disaster recovery plan and its testing.</p></div>
+    <dl>
+      <div><dt class="k">Why it matters in banking</dt><dd>Trusted access is the main route in. Authentication protects the login; the attacks on record go around it through account resets and help desks. Recovery only counts if balances come back correct.</dd></div>
+      <div><dt class="k">Where it went wrong</dt><dd>River Financial took systems offline after administrator accounts were compromised. The ECB's test of 109 banks against a lost core database found frameworks in place and recovery gaps behind them.</dd></div>
+      <div><dt class="k">Road to credit</dt><dd>Broad outage, fraud, data exposure, reconciliation cost and liquidity pressure while records are rebuilt.</dd></div>
+      <div><dt class="k">What changes its weight</dt><dd>Heavier if recovery systems share administrator access with production, or if the last recovery test restored servers but never validated transactions. Lighter with recent, scoped, business-validated tests.</dd></div>
+    </dl></div>
+
+  <div class="map"><div><p class="k">Theme 3</p><h3>Business continuity and cyber resilience</h3><p class="covers">Covers the continuity plan, the cyber resilience plan, and how often they are tested and updated.</p></div>
+    <dl>
+      <div><dt class="k">Why it matters in banking</dt><dd>Settlement, margin and payroll have hard deadlines. A fallback that keeps a minimum service can still fail to clear the queue in time, and that is when liquidity is called on.</dd></div>
+      <div><dt class="k">Where it went wrong</dt><dd>ION's clients ran manually for weeks and met obligations only with clearing-house help. ICBC's US unit carried a temporary $9bn settlement obligation. Four Iranian banks stopped together through one shared network.</dd></div>
+      <div><dt class="k">Road to credit</dt><dd>Missed settlement, emergency funding, lost fees, customer compensation.</dd></div>
+      <div><dt class="k">What changes its weight</dt><dd>Heavier for digital-only delivery, deadline-sensitive businesses and a single outsourced core. Lighter where alternative channels and suppliers have been exercised at real volume with treasury in the room.</dd></div>
+    </dl></div>
+
+  <div class="map"><div><p class="k">Theme 4</p><h3>Insurance, certification and data protection</h3><p class="covers">Covers cyber insurance, security certifications, data-protection compliance and the data protection officer.</p></div>
+    <dl>
+      <div><dt class="k">Why it matters in banking</dt><dd>These are the answers most likely to be read as comfort. Insurance pays later and partially. A certificate covers the scope it names. Data harm can be severe with no interruption at all.</dd></div>
+      <div><dt class="k">Where it went wrong</dt><dd>Standard Bank lost document-system data while core banking ran normally. Capital One's settlement arrived years after the breach. DriveWealth exposed records of clients who had already left.</dd></div>
+      <div><dt class="k">Road to credit</dt><dd>Notification and protection costs, litigation, privacy penalties; immediate cash needs that insurance does not meet.</dd></div>
+      <div><dt class="k">What changes its weight</dt><dd>Heavier with large retail data holdings, several reporting regimes and data retained at suppliers. Check policy sublimits, exclusions and waiting periods, and whether the certificate covers the critical services.</dd></div>
+    </dl></div>
+
+  <div class="map" style="border-bottom:1px solid var(--ink)"><div><p class="k">Theme 5</p><h3>Learning from incidents</h3><p class="covers">Covers post-incident analysis, regular risk assessments, and whether plans change as a result.</p></div>
+    <dl>
+      <div><dt class="k">Why it matters in banking</dt><dd>Supervisors judge banks on whether findings are closed. Repeat findings are the clearest public signal of a governance problem, and they attract the remedies that cost most.</dd></div>
+      <div><dt class="k">Where it went wrong</dt><dd>ECB supervisors found over 10% of critical-function contracts non-compliant and outstanding ICT findings still open. In the Korean cluster one bank's affected count rose from 119 to 2,210 as the investigation matured.</dd></div>
+      <div><dt class="k">Road to credit</dt><dd>Recurring incidents, rising supervisory intensity, franchise damage and higher run-rate cost.</dd></div>
+      <div><dt class="k">What changes its weight</dt><dd>Heavier with repeated overdue findings and no named owner. Lighter where fixes are retested: proof that the original failure no longer succeeds is stronger than proof that a change was made.</dd></div>
+    </dl></div>
+
+  <p class="note small" style="border-top:0;margin-top:14px">Where the questionnaire is silent, ask anyway: critical suppliers and their concentration, independent checks on high-value payments, and whether recovery is separate from the systems it is meant to recover. These three areas account for most of the consequential incidents in Plate 06.</p>
+</div></section>
+
+<section class="plate" id="p12"><div class="wrap">
+  <header class="ph"><p class="k no">Plate<b>12</b></p><div>
+    <h2>The conversation, and when to escalate</h2>
+    <p class="lede">One question sits behind all the others: could this issue stop the borrower delivering essential services, reaching its liquidity or recovering trustworthy records, and could its finances absorb the result? The prompts below need no technical vocabulary on either side of the table.</p></div></header>
+
+  <div class="cols c3">
+    <div class="ask"><p class="k">Critical services</p><p class="q">"Which services must continue even if your main technology is unavailable?"</p><p class="w">A good answer names services, owners and a recovery order that has been tested with the business.</p></div>
+    <div class="ask"><p class="k">Privileged access</p><p class="q">"How do you confirm that a request to reset an administrator's access is genuine?"</p><p class="w">Listen for a process that does not rely on the help desk recognising a voice.</p></div>
+    <div class="ask"><p class="k">Recovery</p><p class="q">"When did you last restore an essential service from recovery copies, and how did you confirm the balances were correct?"</p><p class="w">A date, a scope and a business sign-off. Not a target restart time.</p></div>
+    <div class="ask"><p class="k">Independence</p><p class="q">"Could a compromised employee or supplier account also reach your recovery systems?"</p><p class="w">If production and recovery share one administrator path, redundancy is nominal.</p></div>
+    <div class="ask"><p class="k">Suppliers</p><p class="q">"Which supplier failure would be hardest to work around, and for how long?"</p><p class="w">Follow with whether recovery has been tested jointly, including loss of the supplier's own support.</p></div>
+    <div class="ask"><p class="k">Minimum service</p><p class="q">"What could customers still do during a prolonged incident?"</p><p class="w">And how operations, treasury and suppliers would coordinate if email and normal systems were down.</p></div>
+    <div class="ask"><p class="k">Payments</p><p class="q">"What independent check protects a high-value payment or a change of beneficiary?"</p><p class="w">Authentication alone is the Bangladesh Bank answer.</p></div>
+    <div class="ask"><p class="k">Data release</p><p class="q">"Could sensitive customer information be released on the strength of an official-looking request alone?"</p><p class="w">The Revolut case needed no intrusion.</p></div>
+    <div class="ask"><p class="k">Containment</p><p class="q">"Could you isolate an affected area without stopping the whole bank?"</p><p class="w">Ask which exercise last showed it.</p></div>
+  </div>
+
+  <h3 class="sub">Warning signs and a proportionate response</h3>
+  <div class="scroll"><table style="min-width:680px">
+    <tr><th>If you hear or see this</th><th>Then</th><th>Level</th></tr>
+    <tr><td>Broad assurances with no scope, date or test behind them</td><td>Ask for proportionate evidence before relying on them.</td><td><span class="ev">Clarify</span></td></tr>
+    <tr><td>No demonstrated restoration of the core ledger or an essential payment service</td><td>Request a short service-level recovery summary.</td><td><span class="ev">Clarify</span></td></tr>
+    <tr><td>Repeated overdue findings on essential operations</td><td>Seek owner, milestones and retest evidence; review more often.</td><td><span class="ev">Monitor</span></td></tr>
+    <tr><td>A critical supplier with no tested workaround, joint recovery or usable exit</td><td>Review concentration, contractual access and minimum-service options.</td><td><span class="ev">Monitor</span></td></tr>
+    <tr><td>Thin liquidity or capital headroom alongside a plausible prolonged interruption</td><td>Run borrower-specific liquidity, earnings and capital sensitivities.</td><td><span class="ev">Monitor</span></td></tr>
+    <tr><td>Recovery depends on the same identity or administrator access as production</td><td>Bring in cyber specialists to assess independence and compensating controls.</td><td><span class="ev crit" style="background:var(--ink);color:var(--paper)">Specialist</span></td></tr>
+    <tr><td>Uncertain balances, positions, reconciliation or access to customer funds</td><td>Engage operational, treasury and specialist colleagues promptly.</td><td><span class="ev crit" style="background:var(--ink);color:var(--paper)">Specialist</span></td></tr>
+    <tr><td>A confirmed incident with unresolved service or liquidity effects</td><td>Obtain factual updates on service capacity, cash needs and recovery milestones.</td><td><span class="ev crit" style="background:var(--ink);color:var(--paper)">Specialist</span></td></tr>
+    <tr><td>A possible missed reporting duty or unclear legal scope</td><td>Refer to legal and compliance. Do not diagnose a breach from a questionnaire.</td><td><span class="ev crit" style="background:var(--ink);color:var(--paper)">Specialist</span></td></tr>
+  </table></div>
+  <p class="small" style="margin-top:10px">Escalation means clarifying, monitoring or seeking specialist input. It does not by itself mean repricing, reducing limits or declining credit.</p>
+
+  <div class="cols c2" style="margin-top:38px">
+    <div>
+      <h3 class="sub" style="margin-top:0">Improvements a borrower can act on</h3>
+      <ul class="plain">
+        <li>Name an owner for each critical service and keep a one-page dependency map.</li>
+        <li>Test the whole identity chain, including help-desk resets and supplier access.</li>
+        <li>Prove a clean restore: data, keys and applications, with balances validated and backlog cleared.</li>
+        <li>Exercise the loss of a critical supplier and of that supplier's support.</li>
+        <li>Fix by business impact: unknown and unsupported assets behind critical services first.</li>
+        <li>Close findings by retesting, not by reporting completion.</li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="sub" style="margin-top:0">What to write in the credit file</h3>
+      <div class="record">
+        <div><p class="k">Client statement</p>What was said, by whom, when</div>
+        <div><p class="k">Evidence status</p>Self-report, document, test result or specialist-confirmed</div>
+        <div><p class="k">Operational relevance</p>Service, dependency, plausible interruption</div>
+        <div><p class="k">Mitigants</p>Alternatives, compensating controls, buffers</div>
+        <div><p class="k">Uncertainty</p>Facts not yet established</div>
+        <div><p class="k">Agreed action</p>Owner, milestone, review date</div>
+        <div><p class="k">Credit interpretation</p>Consequence and sensitivity, never an unsupported loss figure</div>
+      </div>
+    </div>
+  </div>
+  <p class="note" style="font:italic 400 1.3rem/1.4 var(--f-display)">Give most weight to a demonstrated ability to preserve trustworthy records, complete essential transactions and reach liquidity during disruption. Use the questionnaire to find where that demonstration is still missing.</p>
+</div></section>
+
+<footer><div class="wrap">
+  <canvas class="band" data-g="band" aria-hidden="true" style="margin:0 0 34px"></canvas>
+  <div class="cols c3">
+    <div><h3>What this document does not know</h3><p class="small">Recent primary evidence is weighted to the US, EU, UK, South Korea, South Africa and India; less reporting elsewhere is not evidence of less activity. Initial access and final cost are undisclosed for most recent incidents. Q3 2026 bank results were not comprehensively reconciled. No banking-only worldwide cost, frequency or maturity average is asserted. Regulatory timings partly rely on secondary legal reporting and need entity-specific confirmation.</p></div>
+    <div><h3>Principal sources</h3><p class="small">EBA risk dashboard, Bank of England Financial Stability Report and FDIC Quarterly Banking Profile (2026). FCA, ECB Banking Supervision, ESAs, Basel Committee, FSB. US DOJ, SEC filings, OCC, CFTC, FSOC annual report, FBI, CISA, NYDFS, state breach notifications. CERT-EU, Korea FSC, Canadian Cyber Centre. UK Finance. IBM/Ponemon, Sophos, Verizon, Akamai, Netcraft, Microsoft, Mandiant, Bitsight. Company disclosures by the institutions named.</p></div>
+    <div><h3>Use</h3><p class="small">Prepared to support evidence-based discussion between Senior Credit Officers and banking borrowers. It is sector intelligence with an evidence cutoff of 27 October 2026. It is not a cybersecurity audit, a compliance assessment, an independent verification of any borrower's controls or a statement about any borrower's creditworthiness. Allegations in charging documents are not convictions.</p></div>
+  </div>
+</div></footer>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  function col(n){return getComputedStyle(root).getPropertyValue(n).trim()||'#888'}
+  function prep(c){var r=c.getBoundingClientRect(),d=Math.min(window.devicePixelRatio||1,2);
+    c.width=Math.max(1,Math.round(r.width*d));c.height=Math.max(1,Math.round(r.height*d));
+    var x=c.getContext('2d');x.setTransform(d,0,0,d,0,0);x.clearRect(0,0,r.width,r.height);return[x,r.width,r.height]}
+  function rosette(c){var p=prep(c),x=p[0],w=p[1],h=p[2],cx=w/2,cy=h/2,R=Math.min(w,h)/2-3;
+    [[.80,.165,12,22,'--ink',.5],[.56,.07,20,14,'--plum',.6],[.945,.03,48,5,'--foil',.9],[.40,.05,9,10,'--ink',.35]].forEach(function(L){
+      x.strokeStyle=col(L[4]);x.globalAlpha=L[5];x.lineWidth=.6;
+      for(var j=0;j<L[3];j++){x.beginPath();
+        for(var i=0;i<=900;i++){var t=i/900*Math.PI*2,rad=R*(L[0]+L[1]*Math.sin(L[2]*t+j*2*Math.PI/L[3]));
+          var px=cx+rad*Math.cos(t),py=cy+rad*Math.sin(t);i?x.lineTo(px,py):x.moveTo(px,py)}
+        x.closePath();x.stroke()}});
+    x.globalAlpha=1}
+  function band(c){var p=prep(c),x=p[0],w=p[1],h=p[2],m=9;x.lineWidth=.6;
+    [['--ink',.45,.05],['--plum',.5,.031]].forEach(function(L){x.strokeStyle=col(L[0]);x.globalAlpha=L[1];
+      for(var j=0;j<m;j++){x.beginPath();
+        for(var px=0;px<=w;px+=2){var y=h/2+(h/2-2)*Math.sin(px*L[2]+j*2*Math.PI/m)*Math.cos(px*.0045);px?x.lineTo(px,y):x.moveTo(px,y)}
+        x.stroke()}});
+    x.globalAlpha=1}
+  function draw(){document.querySelectorAll('canvas[data-g]').forEach(function(c){(c.dataset.g==='rosette'?rosette:band)(c)})}
+  var q;function later(){cancelAnimationFrame(q);q=requestAnimationFrame(draw)}
+  draw();
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(later);
+  window.addEventListener('resize',later);
+  try{window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',later)}catch(e){}
+  new MutationObserver(later).observe(root,{attributes:true,attributeFilter:['data-theme']});
+})();
+</script>
