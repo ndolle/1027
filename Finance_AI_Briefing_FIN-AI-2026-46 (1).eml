@@ -1,0 +1,509 @@
+Subject: Finance & AI Briefing | FIN-AI-2026-46 | 16 November 2026
+Date: Mon, 16 Nov 2026 00:00:00 +0000
+X-Unsent: 1
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============8357862840205025090=="
+
+--===============8357862840205025090==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Finance & AI Briefing
+
+FIN-AI-2026-46 =C2=B7 16 November 2026 =C2=B7 Covering 9=E2=80=9315 November =
+2026
+
+1. WHAT CHANGED
+
+Fineco is extending AI agents from employee assistance into the design of ban=
+king processes and controls.
+
+Reporting on 9 November described BOOST, a programme to redesign back-office =
+operations, customer relationship management and internal controls using coll=
+aborating AI agents. Fineco=E2=80=99s plans include continuous, predictive mo=
+nitoring for audit, compliance and anti-money-laundering. These are programme=
+ objectives, not evidence that autonomous controls have already replaced exis=
+ting arrangements.
+
+The structural change concerns where AI sits in the operating model. An assis=
+tant helps an employee complete a task; collaborating agents can influence ho=
+w work moves between departments, which exceptions receive attention and what=
+ evidence reaches control functions.
+
+That challenges the assumption that oversight can remain separate from workfl=
+ow design. When agents generate both operational actions and monitoring infor=
+mation, management needs to distinguish independent challenge from one automa=
+ted process checking another. Financial and legal exposure then depends not o=
+nly on answer quality, but also on delegated authority, missed exceptions and=
+ the ability to reconstruct decisions.
+
+EconomyUp: https://www.economyup.it/fintech/fineco-avvia-boost-cosi-gli-agent=
+i-ai-ridisegnano-processi-e-controlli-interni/
+
+2. MODEL RACE
+
+Evaluating foundation model releases through enterprise cost, security, and d=
+ata sovereignty.
+
+BAIDU: ERNIE 5.5 Flash Preview
+
+Released on 11 November through Qianfan=E2=80=99s API, ERNIE 5.5 Flash Previe=
+w carried a promise of downloadable weights by 25 November. That promise does=
+ not establish current self-hosting availability. The report provides no ente=
+rprise-specific tariff, contractual residency terms or evidence of reduced ha=
+llucinations in regulated banking tasks. Read more: https://pandaily.com/baid=
+u-ernie-5-5-flash-preview-qianfan-api-weights-promised
+
+LG AI RESEARCH: K-EXAONE 2.5 public API
+
+LG made the existing K-EXAONE 2.5 API publicly available without charge, acco=
+rding to reporting on 9 November. This changes access economics rather than e=
+stablishing a new model release. Open-weight availability, self-hosting right=
+s, enterprise service guarantees, data-residency commitments and banking-spec=
+ific hallucination improvements were not established in the announcement. Rea=
+d more: https://en.sedaily.com/finance/2026/11/09/lg-opens-national-ai-model-=
+k-exaone-to-public-for-free
+
+SAKANA AI: Sawara foundation-model programme
+
+Reported on 13 November, Sawara is a planned foundation-model programme, not =
+an available enterprise service. Pretraining is scheduled to begin in Decembe=
+r, with Sawara Small weights targeted for spring 2027. API prices, deployment=
+ jurisdictions, self-hosting terms and measured hallucination reductions rema=
+in undisclosed at this announcement stage. Read more: https://alphasignal.ai/=
+news/sakana-ai-builds-sawara-its-first-foundation-model-from-scratch
+
+3. KEY DEVELOPMENTS
+
+Verifiable industry milestones, major peer deployments, and regulatory framew=
+ork shifts.
+
+JPMORGAN CHASE: OpenAI coding and cybersecurity contract
+
+JPMorgan signed a contract covering OpenAI=E2=80=99s Codex coding platform, c=
+ybersecurity technology and broader AI deployments, according to OpenAI presi=
+dent Greg Brockman. Reporting on 9 November disclosed neither contract value =
+nor implementation scale. Brockman presented the agreement as an example of e=
+nterprise customers=E2=80=99 growing contribution to OpenAI revenue. Read mor=
+e: https://www.fstech.co.uk/fst/OpenAI_announces_partnership_with_JPMorgan_as=
+_it_works_to_grow_enterprise_revenue.php
+
+WELLS FARGO: Wealth-management AI Teammate
+
+Wells Fargo=E2=80=99s wealth and investment management unit launched AI Teamm=
+ate to help advisers and client associates retrieve institutional insights. R=
+eporting on 10 November described information gathering and preparation of co=
+nsolidated client presentations as target workflows. It did not disclose depl=
+oyment expenditure, employee coverage or independently measured productivity =
+gains. Read more: https://finance.yahoo.com/technology/ai/articles/8-question=
+s-wells-fargo-wealth-172120912.html
+
+BMO: Contact-centre support retains employee accountability
+
+BMO described AI Agent Assist supporting contact-centre employees with credit=
+-card transaction matching, policy retrieval and case preparation. Its 10 Nov=
+ember disclosure states that employees remain accountable for reviewing gener=
+ated information and making servicing decisions. The announcement documents w=
+orkflow support rather than a transfer of decision responsibility to agents. =
+Read more: https://finance.yahoo.com/technology/ai/articles/bmo-wins-five-omn=
+i-awards-130000371.html
+
+AIHK: Governance guidelines address connected agents
+
+Guidelines reported on 12 November recommend three risk tiers, board oversigh=
+t, an accountable executive and a central AI register. Agents connected to or=
+ganisational systems receive at least an elevated-risk classification. These =
+are governance recommendations, not a newly enacted banking mandate; outsourc=
+ing does not transfer responsibility for an organisation=E2=80=99s use. Read =
+more: https://fintechnews.hk/42109/ai/ai-governance-guidelines-aihk-hong-kong/
+
+GROUP FOCUS
+
+Published disclosures and strategic plans across BNP Paribas Group and entiti=
+es.
+
+- Group AI governance =E2=80=94 Coverage published on 9 November described ne=
+arly 1,000 AI use cases underway at BNP Paribas, supported by a group-level f=
+ramework with responsibilities distributed across businesses and functions. G=
+roup CTO Jean-Michel Garcia identified customer service and employee effectiv=
+eness as objectives. The figure describes an existing portfolio, not 1,000 la=
+unches during the week. Read more: https://siliconangle.com/2026/11/09/ibm-bu=
+ilds-hybrid-cloud-governance-advance-enterprise-ai-operating-model-ibmthink/
+
+- Asset Management analytical tools =E2=80=94 A BNP Paribas Spain disclosure =
+published on 10 November set out Asset Management=E2=80=99s 2026=E2=80=932030=
+ sustainability strategy. Its plans include proprietary analytical tools and =
+dashboards with AI-enabled capabilities, within a programme intended to stren=
+gthen portfolio resilience and create client value. The disclosure describes =
+strategic development rather than measured deployment outcomes. Read more: ht=
+tps://www.bnpparibas.es/es/bnp-paribas-asset-management-lanza-su-estrategia-g=
+lobal-de-sostenibilidad-2026-2030/
+- Responsible and sustainable AI =E2=80=94 The same Asset Management strategy=
+ includes leading industry initiatives on responsible and sustainable AI. Thi=
+s is a separate policy commitment within the strategy, not an additional prod=
+uct launch. The disclosure does not establish a dedicated AI investment budge=
+t, quantified financial return or completed delivery against that commitment.=
+ Read more: https://www.bnpparibas.es/es/bnp-paribas-asset-management-lanza-s=
+u-estrategia-global-de-sostenibilidad-2026-2030/
+
+4. CONTROL CONSIDERATIONS
+
+- Whether collaborating agents have individually defined permissions, account=
+able owners and escalation boundaries, including controls over the combined a=
+ctions that become possible when agents exchange information across departmen=
+tal workflows? (Technology, Operational Risk)
+
+- Whether AI-enabled monitoring remains independent of the processes it asses=
+ses, with testing for shared model failures, common data errors and exception=
+s that disappear between operational and oversight systems? (Compliance, Inte=
+rnal Audit)
+- Whether coding and cybersecurity contracts identify permitted access to rep=
+ositories, credentials and production systems, alongside approval requirement=
+s for generated code, vulnerability testing and automated remediation activit=
+ies? (Engineering, Security)
+
+- Whether adviser-facing assistants distinguish approved research from genera=
+ted interpretation, preserve source dates and document human review before in=
+formation enters client presentations, recommendations or other customer comm=
+unications? (Wealth Management, Conduct)
+- Whether contact-centre employees can challenge AI-generated transaction mat=
+ches and policy interpretations, with sufficient source evidence, escalation =
+capacity and time to exercise the responsibility formally assigned to them? (=
+Customer Operations, Compliance)
+
+- Whether free or preview APIs have documented limits, contractual protection=
+s and exit arrangements, with business cases separating temporary access pric=
+es from production costs, service guarantees and validation expenditure? (Pro=
+curement, Finance)
+- Whether announced open-weight releases are distinguished from weights curre=
+ntly available under usable licences, and whether self-hosting assessments co=
+ver telemetry, maintenance access, monitoring services and downstream data tr=
+ansfers? (Architecture, Privacy)
+
+- Whether AI-related credit exposure is aggregated across developers, infrast=
+ructure operators, power suppliers and investment vehicles, including depende=
+ncies on common customers, refinancing assumptions and contracts supporting p=
+rojected revenues? (Credit Risk, Treasury)
+
+5. ALSO THIS WEEK
+
+- [Infrastructure] =E2=80=94 IBM and Microsoft introduced Imagine Enterprise,=
+ combining Microsoft cloud infrastructure with more than 6,000 IBM agents and=
+ related assets. Read more: https://www.pymnts.com/news/artificial-intelligen=
+ce/2026/ibm-and-microsoft-launch-ai-agent-platform/
+
+- [Macro & Capital] =E2=80=94 In a Federal Reserve survey, 87% of respondents=
+ identified AI as a risk, compared with 50% in spring. Read more: https://yle=
+.fi/a/7-10108717
+- [Regulation] =E2=80=94 The FCA, CFTE and NayaOne developed an AI use-case o=
+bservatory, with its launch scheduled for 19 November. Read more: https://www=
+.innovatefinance.com/events/ai-spotlight-observatory-launch/
+
+- [Core Banking & Operations] =E2=80=94 Piramal Finance reported approximatel=
+y 80,000 automated credit memos in FY25; credit managers retained final lendi=
+ng decisions. Read more: https://hr.economictimes.indiatimes.com/news/industr=
+y/ai-is-driving-productivity-not-workforce-cuts-how-piramal-finance-is-scalin=
+g-its-business/135609664
+- [Infrastructure] =E2=80=94 OpenAI announced API inference processing in Ind=
+ia for enterprise workloads. Read more: https://www.expresscomputer.in/news/o=
+penai-extends-api-inference-residency-to-india-for-enterprise-ai-workloads/14=
+1213/
+
+- [Retail & Products] =E2=80=94 OpenAI is working with Stripe, Adyen and Chec=
+kout.com on recognising payments initiated by AI agents. Read more: https://i=
+tavisen.no/2026/11/13/chatgpt-wallet-ai-agent-betaling/
+- [Regulation] =E2=80=94 Cyprus approved an AI strategy targeting business ad=
+option of 75% by 2032. Read more: https://en.philenews.com/insider/cyprus-nat=
+ional-ai-strategy-2026-2032-cabinet-approves-targets/
+
+- [Macro & Capital] =E2=80=94 Future Secure AI raised $80 million to expand i=
+ts AI co-worker platform. Read more: https://www.citybiz.co/article/930945/fu=
+ture-secure-ai-raises-80m-to-expand-ai-co-worker-platform/?abkw=3Dcitybizbost=
+on
+- [Infrastructure] =E2=80=94 CoreWeave introduced testing of AI integrations =
+on its cloud before customer migration. Read more: https://thenewstack.io/cor=
+eweave-tests-ai-integrations/
+
+- [Cyber & Risk] =E2=80=94 Endor Labs published analysis of static-analysis c=
+overage and limitations for AI-generated code. Read more: https://www.endorla=
+bs.com/learn/sast-for-ai-generated-code-what-static-analysis-catches-and-miss=
+es
+- [Cyber & Risk] =E2=80=94 Protegrity introduced an open-weight model for det=
+ecting sensitive personal data. Read more: https://www.cybersecurity-insiders=
+.com/protegrity-introduces-open-weights-model-to-improve-detection-of-sensiti=
+ve-personal-data/
+
+- [Cyber & Risk] =E2=80=94 Chainalysis published research into proxy services=
+ supporting China=E2=80=99s AI model-distillation market. Read more: https://=
+www.chainalysis.com/blog/chinese-ai-proxy-services/
+
+--===============8357862840205025090==
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!doctype html>
+<html lang=3D"en-GB">
+<head><meta charset=3D"utf-8"><meta name=3D"viewport" content=3D"width=3Ddevi=
+ce-width, initial-scale=3D1"><title>Finance &amp; AI Briefing</title></head>
+<body style=3D"margin:0;padding:0;background-color:#f0f5f3;">
+<table role=3D"presentation" width=3D"100%" cellspacing=3D"0" cellpadding=3D"=
+0" border=3D"0" style=3D"background-color:#f0f5f3;">
+<tr><td align=3D"center" style=3D"padding:20px 10px;">
+<!--[if mso]><table role=3D"presentation" width=3D"800" cellspacing=3D"0" cel=
+lpadding=3D"0" border=3D"0"><tr><td><![endif]-->
+<table role=3D"presentation" width=3D"100%" cellspacing=3D"0" cellpadding=3D"=
+0" border=3D"0" style=3D"max-width:800px;background-color:#ffffff;">
+<tr><td bgcolor=3D"#07543f" style=3D"padding:25px 24px;color:#ffffff;font-fam=
+ily:Arial,sans-serif;">
+<h1 style=3D"margin:0 0 8px;color:#ffffff;font-size:32px;line-height:1.15;">F=
+inance &amp; AI Briefing</h1>
+<p style=3D"margin:0;color:#ffffff;font-size:14px;line-height:1.6;"><strong>F=
+IN-AI-2026-46</strong> =C2=B7 16 November 2026 =C2=B7 Covering 9=E2=80=9315 N=
+ovember 2026</p>
+</td></tr>
+<tr><td style=3D"padding:0 24px 20px;color:#24322e;font-family:Arial,sans-ser=
+if;font-size:16px;line-height:1.55;">
+<h2 style=3D"margin:28px 0 14px;padding-top:18px;border-top:1px solid #cbdfd7=
+;color:#00684b;font-size:18px;line-height:1.3;">1. WHAT CHANGED</h2>
+<p style=3D"margin:0 0 13px;"><strong>Fineco is extending AI agents from empl=
+oyee assistance into the design of banking processes and controls.</strong></=
+p>
+<p style=3D"margin:0 0 13px;">Reporting on 9 November described BOOST, a prog=
+ramme to redesign back-office operations, customer relationship management an=
+d internal controls using collaborating AI agents. Fineco=E2=80=99s plans inc=
+lude continuous, predictive monitoring for audit, compliance and anti-money-l=
+aundering. These are programme objectives, not evidence that autonomous contr=
+ols have already replaced existing arrangements.</p>
+<p style=3D"margin:0 0 13px;">The structural change concerns where AI sits in=
+ the operating model. An assistant helps an employee complete a task; collabo=
+rating agents can influence how work moves between departments, which excepti=
+ons receive attention and what evidence reaches control functions.</p>
+<p style=3D"margin:0 0 13px;">That challenges the assumption that oversight c=
+an remain separate from workflow design. When agents generate both operationa=
+l actions and monitoring information, management needs to distinguish indepen=
+dent challenge from one automated process checking another. Financial and leg=
+al exposure then depends not only on answer quality, but also on delegated au=
+thority, missed exceptions and the ability to reconstruct decisions.</p>
+<p style=3D"margin:0 0 13px;"><a href=3D"https://www.economyup.it/fintech/fin=
+eco-avvia-boost-cosi-gli-agenti-ai-ridisegnano-processi-e-controlli-interni/"=
+ style=3D"color:#007454;text-decoration:underline;">EconomyUp</a></p>
+<h2 style=3D"margin:28px 0 14px;padding-top:18px;border-top:1px solid #cbdfd7=
+;color:#00684b;font-size:18px;line-height:1.3;">2. MODEL RACE</h2>
+<p style=3D"margin:0 0 13px;"><em>Evaluating foundation model releases throug=
+h enterprise cost, security, and data sovereignty.</em></p>
+<h3 style=3D"margin:19px 0 5px;color:#182b25;font-size:17px;line-height:1.4;"=
+>BAIDU: ERNIE 5.5 Flash Preview</h3>
+<p style=3D"margin:0 0 13px;">Released on 11 November through Qianfan=E2=80=
+=99s API, ERNIE 5.5 Flash Preview carried a promise of downloadable weights b=
+y 25 November. That promise does not establish current self-hosting availabil=
+ity. The report provides no enterprise-specific tariff, contractual residency=
+ terms or evidence of reduced hallucinations in regulated banking tasks. <a h=
+ref=3D"https://pandaily.com/baidu-ernie-5-5-flash-preview-qianfan-api-weights=
+-promised" style=3D"color:#007454;text-decoration:underline;">Read more</a></=
+p>
+<h3 style=3D"margin:19px 0 5px;color:#182b25;font-size:17px;line-height:1.4;"=
+>LG AI RESEARCH: K-EXAONE 2.5 public API</h3>
+<p style=3D"margin:0 0 13px;">LG made the existing K-EXAONE 2.5 API publicly =
+available without charge, according to reporting on 9 November. This changes =
+access economics rather than establishing a new model release. Open-weight av=
+ailability, self-hosting rights, enterprise service guarantees, data-residenc=
+y commitments and banking-specific hallucination improvements were not establ=
+ished in the announcement. <a href=3D"https://en.sedaily.com/finance/2026/11/=
+09/lg-opens-national-ai-model-k-exaone-to-public-for-free" style=3D"color:#00=
+7454;text-decoration:underline;">Read more</a></p>
+<h3 style=3D"margin:19px 0 5px;color:#182b25;font-size:17px;line-height:1.4;"=
+>SAKANA AI: Sawara foundation-model programme</h3>
+<p style=3D"margin:0 0 13px;">Reported on 13 November, Sawara is a planned fo=
+undation-model programme, not an available enterprise service. Pretraining is=
+ scheduled to begin in December, with Sawara Small weights targeted for sprin=
+g 2027. API prices, deployment jurisdictions, self-hosting terms and measured=
+ hallucination reductions remain undisclosed at this announcement stage. <a h=
+ref=3D"https://alphasignal.ai/news/sakana-ai-builds-sawara-its-first-foundati=
+on-model-from-scratch" style=3D"color:#007454;text-decoration:underline;">Rea=
+d more</a></p>
+<h2 style=3D"margin:28px 0 14px;padding-top:18px;border-top:1px solid #cbdfd7=
+;color:#00684b;font-size:18px;line-height:1.3;">3. KEY DEVELOPMENTS</h2>
+<p style=3D"margin:0 0 13px;"><em>Verifiable industry milestones, major peer =
+deployments, and regulatory framework shifts.</em></p>
+<h3 style=3D"margin:19px 0 5px;color:#182b25;font-size:17px;line-height:1.4;"=
+>JPMORGAN CHASE: OpenAI coding and cybersecurity contract</h3>
+<p style=3D"margin:0 0 13px;">JPMorgan signed a contract covering OpenAI=E2=
+=80=99s Codex coding platform, cybersecurity technology and broader AI deploy=
+ments, according to OpenAI president Greg Brockman. Reporting on 9 November d=
+isclosed neither contract value nor implementation scale. Brockman presented =
+the agreement as an example of enterprise customers=E2=80=99 growing contribu=
+tion to OpenAI revenue. <a href=3D"https://www.fstech.co.uk/fst/OpenAI_announ=
+ces_partnership_with_JPMorgan_as_it_works_to_grow_enterprise_revenue.php" sty=
+le=3D"color:#007454;text-decoration:underline;">Read more</a></p>
+<h3 style=3D"margin:19px 0 5px;color:#182b25;font-size:17px;line-height:1.4;"=
+>WELLS FARGO: Wealth-management AI Teammate</h3>
+<p style=3D"margin:0 0 13px;">Wells Fargo=E2=80=99s wealth and investment man=
+agement unit launched AI Teammate to help advisers and client associates retr=
+ieve institutional insights. Reporting on 10 November described information g=
+athering and preparation of consolidated client presentations as target workf=
+lows. It did not disclose deployment expenditure, employee coverage or indepe=
+ndently measured productivity gains. <a href=3D"https://finance.yahoo.com/tec=
+hnology/ai/articles/8-questions-wells-fargo-wealth-172120912.html" style=3D"c=
+olor:#007454;text-decoration:underline;">Read more</a></p>
+<h3 style=3D"margin:19px 0 5px;color:#182b25;font-size:17px;line-height:1.4;"=
+>BMO: Contact-centre support retains employee accountability</h3>
+<p style=3D"margin:0 0 13px;">BMO described AI Agent Assist supporting contac=
+t-centre employees with credit-card transaction matching, policy retrieval an=
+d case preparation. Its 10 November disclosure states that employees remain a=
+ccountable for reviewing generated information and making servicing decisions=
+. The announcement documents workflow support rather than a transfer of decis=
+ion responsibility to agents. <a href=3D"https://finance.yahoo.com/technology=
+/ai/articles/bmo-wins-five-omni-awards-130000371.html" style=3D"color:#007454=
+;text-decoration:underline;">Read more</a></p>
+<h3 style=3D"margin:19px 0 5px;color:#182b25;font-size:17px;line-height:1.4;"=
+>AIHK: Governance guidelines address connected agents</h3>
+<p style=3D"margin:0 0 13px;">Guidelines reported on 12 November recommend th=
+ree risk tiers, board oversight, an accountable executive and a central AI re=
+gister. Agents connected to organisational systems receive at least an elevat=
+ed-risk classification. These are governance recommendations, not a newly ena=
+cted banking mandate; outsourcing does not transfer responsibility for an org=
+anisation=E2=80=99s use. <a href=3D"https://fintechnews.hk/42109/ai/ai-govern=
+ance-guidelines-aihk-hong-kong/" style=3D"color:#007454;text-decoration:under=
+line;">Read more</a></p>
+<h2 style=3D"margin:28px 0 14px;padding-top:18px;border-top:1px solid #cbdfd7=
+;color:#00684b;font-size:18px;line-height:1.3;">GROUP FOCUS</h2>
+<p style=3D"margin:0 0 13px;"><em>Published disclosures and strategic plans a=
+cross BNP Paribas Group and entities.</em></p>
+<ul style=3D"margin:0 0 16px;padding-left:22px;">
+<li style=3D"margin:0 0 11px;"><strong>Group AI governance</strong> =E2=80=94=
+ Coverage published on 9 November described nearly 1,000 AI use cases underwa=
+y at BNP Paribas, supported by a group-level framework with responsibilities =
+distributed across businesses and functions. Group CTO Jean-Michel Garcia ide=
+ntified customer service and employee effectiveness as objectives. The figure=
+ describes an existing portfolio, not 1,000 launches during the week. <a href=
+=3D"https://siliconangle.com/2026/11/09/ibm-builds-hybrid-cloud-governance-ad=
+vance-enterprise-ai-operating-model-ibmthink/" style=3D"color:#007454;text-de=
+coration:underline;">Read more</a></li>
+<li style=3D"margin:0 0 11px;"><strong>Asset Management analytical tools</str=
+ong> =E2=80=94 A BNP Paribas Spain disclosure published on 10 November set ou=
+t Asset Management=E2=80=99s 2026=E2=80=932030 sustainability strategy. Its p=
+lans include proprietary analytical tools and dashboards with AI-enabled capa=
+bilities, within a programme intended to strengthen portfolio resilience and =
+create client value. The disclosure describes strategic development rather th=
+an measured deployment outcomes. <a href=3D"https://www.bnpparibas.es/es/bnp-=
+paribas-asset-management-lanza-su-estrategia-global-de-sostenibilidad-2026-20=
+30/" style=3D"color:#007454;text-decoration:underline;">Read more</a></li>
+<li style=3D"margin:0 0 11px;"><strong>Responsible and sustainable AI</strong=
+> =E2=80=94 The same Asset Management strategy includes leading industry init=
+iatives on responsible and sustainable AI. This is a separate policy commitme=
+nt within the strategy, not an additional product launch. The disclosure does=
+ not establish a dedicated AI investment budget, quantified financial return =
+or completed delivery against that commitment. <a href=3D"https://www.bnppari=
+bas.es/es/bnp-paribas-asset-management-lanza-su-estrategia-global-de-sostenib=
+ilidad-2026-2030/" style=3D"color:#007454;text-decoration:underline;">Read mo=
+re</a></li>
+</ul>
+<h2 style=3D"margin:28px 0 14px;padding-top:18px;border-top:1px solid #cbdfd7=
+;color:#00684b;font-size:18px;line-height:1.3;">4. CONTROL CONSIDERATIONS</h2>
+<ul style=3D"margin:0 0 16px;padding-left:22px;">
+<li style=3D"margin:0 0 11px;">Whether collaborating agents have individually=
+ defined permissions, accountable owners and escalation boundaries, including=
+ controls over the combined actions that become possible when agents exchange=
+ information across departmental workflows? (Technology, Operational Risk)</l=
+i>
+<li style=3D"margin:0 0 11px;">Whether AI-enabled monitoring remains independ=
+ent of the processes it assesses, with testing for shared model failures, com=
+mon data errors and exceptions that disappear between operational and oversig=
+ht systems? (Compliance, Internal Audit)</li>
+<li style=3D"margin:0 0 11px;">Whether coding and cybersecurity contracts ide=
+ntify permitted access to repositories, credentials and production systems, a=
+longside approval requirements for generated code, vulnerability testing and =
+automated remediation activities? (Engineering, Security)</li>
+<li style=3D"margin:0 0 11px;">Whether adviser-facing assistants distinguish =
+approved research from generated interpretation, preserve source dates and do=
+cument human review before information enters client presentations, recommend=
+ations or other customer communications? (Wealth Management, Conduct)</li>
+<li style=3D"margin:0 0 11px;">Whether contact-centre employees can challenge=
+ AI-generated transaction matches and policy interpretations, with sufficient=
+ source evidence, escalation capacity and time to exercise the responsibility=
+ formally assigned to them? (Customer Operations, Compliance)</li>
+<li style=3D"margin:0 0 11px;">Whether free or preview APIs have documented l=
+imits, contractual protections and exit arrangements, with business cases sep=
+arating temporary access prices from production costs, service guarantees and=
+ validation expenditure? (Procurement, Finance)</li>
+<li style=3D"margin:0 0 11px;">Whether announced open-weight releases are dis=
+tinguished from weights currently available under usable licences, and whethe=
+r self-hosting assessments cover telemetry, maintenance access, monitoring se=
+rvices and downstream data transfers? (Architecture, Privacy)</li>
+<li style=3D"margin:0 0 11px;">Whether AI-related credit exposure is aggregat=
+ed across developers, infrastructure operators, power suppliers and investmen=
+t vehicles, including dependencies on common customers, refinancing assumptio=
+ns and contracts supporting projected revenues? (Credit Risk, Treasury)</li>
+</ul>
+<h2 style=3D"margin:28px 0 14px;padding-top:18px;border-top:1px solid #cbdfd7=
+;color:#00684b;font-size:18px;line-height:1.3;">5. ALSO THIS WEEK</h2>
+<ul style=3D"margin:0 0 16px;padding-left:22px;">
+<li style=3D"margin:0 0 11px;"><strong>[Infrastructure]</strong> =E2=80=94 IB=
+M and Microsoft introduced Imagine Enterprise, combining Microsoft cloud infr=
+astructure with more than 6,000 IBM agents and related assets. <a href=3D"htt=
+ps://www.pymnts.com/news/artificial-intelligence/2026/ibm-and-microsoft-launc=
+h-ai-agent-platform/" style=3D"color:#007454;text-decoration:underline;">Read=
+ more</a></li>
+<li style=3D"margin:0 0 11px;"><strong>[Macro &amp; Capital]</strong> =E2=80=
+=94 In a Federal Reserve survey, 87% of respondents identified AI as a risk, =
+compared with 50% in spring. <a href=3D"https://yle.fi/a/7-10108717" style=3D=
+"color:#007454;text-decoration:underline;">Read more</a></li>
+<li style=3D"margin:0 0 11px;"><strong>[Regulation]</strong> =E2=80=94 The FC=
+A, CFTE and NayaOne developed an AI use-case observatory, with its launch sch=
+eduled for 19 November. <a href=3D"https://www.innovatefinance.com/events/ai-=
+spotlight-observatory-launch/" style=3D"color:#007454;text-decoration:underli=
+ne;">Read more</a></li>
+<li style=3D"margin:0 0 11px;"><strong>[Core Banking &amp; Operations]</stron=
+g> =E2=80=94 Piramal Finance reported approximately 80,000 automated credit m=
+emos in FY25; credit managers retained final lending decisions. <a href=3D"ht=
+tps://hr.economictimes.indiatimes.com/news/industry/ai-is-driving-productivit=
+y-not-workforce-cuts-how-piramal-finance-is-scaling-its-business/135609664" s=
+tyle=3D"color:#007454;text-decoration:underline;">Read more</a></li>
+<li style=3D"margin:0 0 11px;"><strong>[Infrastructure]</strong> =E2=80=94 Op=
+enAI announced API inference processing in India for enterprise workloads. <a=
+ href=3D"https://www.expresscomputer.in/news/openai-extends-api-inference-res=
+idency-to-india-for-enterprise-ai-workloads/141213/" style=3D"color:#007454;t=
+ext-decoration:underline;">Read more</a></li>
+<li style=3D"margin:0 0 11px;"><strong>[Retail &amp; Products]</strong> =E2=
+=80=94 OpenAI is working with Stripe, Adyen and Checkout.com on recognising p=
+ayments initiated by AI agents. <a href=3D"https://itavisen.no/2026/11/13/cha=
+tgpt-wallet-ai-agent-betaling/" style=3D"color:#007454;text-decoration:underl=
+ine;">Read more</a></li>
+<li style=3D"margin:0 0 11px;"><strong>[Regulation]</strong> =E2=80=94 Cyprus=
+ approved an AI strategy targeting business adoption of 75% by 2032. <a href=
+=3D"https://en.philenews.com/insider/cyprus-national-ai-strategy-2026-2032-ca=
+binet-approves-targets/" style=3D"color:#007454;text-decoration:underline;">R=
+ead more</a></li>
+<li style=3D"margin:0 0 11px;"><strong>[Macro &amp; Capital]</strong> =E2=80=
+=94 Future Secure AI raised $80 million to expand its AI co-worker platform. =
+<a href=3D"https://www.citybiz.co/article/930945/future-secure-ai-raises-80m-=
+to-expand-ai-co-worker-platform/?abkw=3Dcitybizboston" style=3D"color:#007454=
+;text-decoration:underline;">Read more</a></li>
+<li style=3D"margin:0 0 11px;"><strong>[Infrastructure]</strong> =E2=80=94 Co=
+reWeave introduced testing of AI integrations on its cloud before customer mi=
+gration. <a href=3D"https://thenewstack.io/coreweave-tests-ai-integrations/" =
+style=3D"color:#007454;text-decoration:underline;">Read more</a></li>
+<li style=3D"margin:0 0 11px;"><strong>[Cyber &amp; Risk]</strong> =E2=80=94 =
+Endor Labs published analysis of static-analysis coverage and limitations for=
+ AI-generated code. <a href=3D"https://www.endorlabs.com/learn/sast-for-ai-ge=
+nerated-code-what-static-analysis-catches-and-misses" style=3D"color:#007454;=
+text-decoration:underline;">Read more</a></li>
+<li style=3D"margin:0 0 11px;"><strong>[Cyber &amp; Risk]</strong> =E2=80=94 =
+Protegrity introduced an open-weight model for detecting sensitive personal d=
+ata. <a href=3D"https://www.cybersecurity-insiders.com/protegrity-introduces-=
+open-weights-model-to-improve-detection-of-sensitive-personal-data/" style=3D=
+"color:#007454;text-decoration:underline;">Read more</a></li>
+<li style=3D"margin:0 0 11px;"><strong>[Cyber &amp; Risk]</strong> =E2=80=94 =
+Chainalysis published research into proxy services supporting China=E2=80=99s=
+ AI model-distillation market. <a href=3D"https://www.chainalysis.com/blog/ch=
+inese-ai-proxy-services/" style=3D"color:#007454;text-decoration:underline;">=
+Read more</a></li>
+</ul>
+</td></tr></table>
+<!--[if mso]></td></tr></table><![endif]-->
+</td></tr></table>
+</body></html>
+
+--===============8357862840205025090==--
